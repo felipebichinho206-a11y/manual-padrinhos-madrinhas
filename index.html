@@ -58,7 +58,6 @@
             overflow-x: hidden;
         }
 
-        /* Aquarela & Textured Cards */
         .watercolor-card {
             position: relative;
             background: linear-gradient(135deg, rgba(255,255,255,0.9) 0%, rgba(253,251,247,0.7) 100%);
@@ -77,7 +76,6 @@
             box-shadow: 0 12px 20px -3px rgba(0, 0, 0, 0.12);
         }
 
-        /* Custom Scrollbar for Carousel */
         .no-scrollbar::-webkit-scrollbar {
             display: none;
         }
@@ -86,7 +84,6 @@
             scrollbar-width: none;
         }
 
-        /* Floral Frame Backgrounds */
         .bg-floral-top {
             background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 800 200'%3E%3Cg fill='%23A67C52' fill-opacity='0.08'%3E%3Cpath d='M100 20c-20 0-40 10-50 30-10-20-30-30-50-30 0 40 30 70 50 100 20-30 50-60 50-100zM750 20c-20 0-40 10-50 30-10-20-30-30-50-30 0 40 30 70 50 100 20-30 50-60 50-100z'/%3E%3Cpath d='M400 10c-30 0-60 15-75 45-15-30-45-45-75-45 0 60 45 105 75 150 30-45 75-90 75-150z'/%3E%3C/g%3E%3C/svg%3E");
             background-repeat: no-repeat;
@@ -104,7 +101,6 @@
             transition: all 0.4s ease-in-out;
         }
 
-        /* Soft Floating Animations */
         @keyframes float {
             0%, 100% { transform: translateY(0px); }
             50% { transform: translateY(-6px); }
@@ -118,7 +114,6 @@
 
     <!-- Header Section -->
     <header class="pt-8 pb-6 px-4 text-center max-w-md mx-auto relative">
-        <!-- SVG Botanical Laurel Leaf Decor -->
         <div class="flex justify-center mb-3">
             <svg class="w-16 h-8 text-earth-light opacity-75" viewBox="0 0 100 50" fill="currentColor">
                 <path d="M50 45 C40 30, 20 25, 5 30 C20 20, 35 20, 50 35 C65 20, 80 20, 95 30 C80 25, 60 30, 50 45 Z"></path>
@@ -239,7 +234,7 @@
                 </div>
             </div>
 
-            <!-- Modelos Sugeridos (Carrossel com Marcações para suas fotos) -->
+            <!-- Modelos Sugeridos (Carrossel com Imagens PNG) -->
             <div class="mb-10">
                 <div class="flex justify-between items-end mb-4">
                     <div>
@@ -255,8 +250,7 @@
                     <!-- Card 1: Terracota -->
                     <div class="snap-center flex-shrink-0 w-56 watercolor-card rounded-2xl overflow-hidden shadow-md border border-earth-light/20">
                         <div class="h-72 overflow-hidden bg-gray-100 relative">
-                            <!-- SUBSTITUA O SRC ABAIXO PELO CAMINHO DA SUA IMAGEM (ex: imagens/madrinha-1.jpg) -->
-                            <img src="imagens/madrinha-terracota.jpg" alt="Vestido Terracota" class="w-full h-full object-cover">
+                            <img src="imagens/terracota.png" alt="Vestido Terracota" class="w-full h-full object-cover">
                             <span class="absolute bottom-2 left-2 bg-black/60 backdrop-blur-md text-white text-[11px] px-2.5 py-1 rounded-full font-serif">Terracota</span>
                         </div>
                         <div class="p-3 text-center">
@@ -267,8 +261,7 @@
                     <!-- Card 2: Azul Marinho -->
                     <div class="snap-center flex-shrink-0 w-56 watercolor-card rounded-2xl overflow-hidden shadow-md border border-earth-light/20">
                         <div class="h-72 overflow-hidden bg-gray-100 relative">
-                            <!-- SUBSTITUA O SRC ABAIXO PELO CAMINHO DA SUA IMAGEM (ex: imagens/madrinha-2.jpg) -->
-                            <img src="imagens/madrinha-azul.jpg" alt="Vestido Azul Marinho" class="w-full h-full object-cover">
+                            <img src="imagens/azul-marinho.png" alt="Vestido Azul Marinho" class="w-full h-full object-cover">
                             <span class="absolute bottom-2 left-2 bg-black/60 backdrop-blur-md text-white text-[11px] px-2.5 py-1 rounded-full font-serif">Azul Marinho</span>
                         </div>
                         <div class="p-3 text-center">
@@ -276,11 +269,32 @@
                         </div>
                     </div>
 
-                    <!-- Card 3: Rosa Queimado -->
+                    <!-- Card 3: Mostarda -->
                     <div class="snap-center flex-shrink-0 w-56 watercolor-card rounded-2xl overflow-hidden shadow-md border border-earth-light/20">
                         <div class="h-72 overflow-hidden bg-gray-100 relative">
-                            <!-- SUBSTITUA O SRC ABAIXO PELO CAMINHO DA SUA IMAGEM (ex: imagens/madrinha-3.jpg) -->
-                            <img src="imagens/madrinha-rosa.jpg" alt="Vestido Rosa Queimado" class="w-full h-full object-cover">
+                            <img src="imagens/mostarda.png" alt="Vestido Mostarda" class="w-full h-full object-cover">
+                            <span class="absolute bottom-2 left-2 bg-black/60 backdrop-blur-md text-white text-[11px] px-2.5 py-1 rounded-full font-serif">Mostarda</span>
+                        </div>
+                        <div class="p-3 text-center">
+                            <p class="text-xs text-gray-600 italic">Vibrante & Marcante</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 4: Verde Oliva -->
+                    <div class="snap-center flex-shrink-0 w-56 watercolor-card rounded-2xl overflow-hidden shadow-md border border-earth-light/20">
+                        <div class="h-72 overflow-hidden bg-gray-100 relative">
+                            <img src="imagens/verde-oliva.png" alt="Vestido Verde Oliva" class="w-full h-full object-cover">
+                            <span class="absolute bottom-2 left-2 bg-black/60 backdrop-blur-md text-white text-[11px] px-2.5 py-1 rounded-full font-serif">Verde Oliva</span>
+                        </div>
+                        <div class="p-3 text-center">
+                            <p class="text-xs text-gray-600 italic">Sofisticado & Natural</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 5: Rosa Queimado -->
+                    <div class="snap-center flex-shrink-0 w-56 watercolor-card rounded-2xl overflow-hidden shadow-md border border-earth-light/20">
+                        <div class="h-72 overflow-hidden bg-gray-100 relative">
+                            <img src="imagens/rosa-queimado.png" alt="Vestido Rosa Queimado" class="w-full h-full object-cover">
                             <span class="absolute bottom-2 left-2 bg-black/60 backdrop-blur-md text-white text-[11px] px-2.5 py-1 rounded-full font-serif">Rosa Queimado</span>
                         </div>
                         <div class="p-3 text-center">
@@ -288,15 +302,25 @@
                         </div>
                     </div>
 
-                    <!-- Card 4: Verde Oliva -->
+                    <!-- Card 6: Chocolate -->
                     <div class="snap-center flex-shrink-0 w-56 watercolor-card rounded-2xl overflow-hidden shadow-md border border-earth-light/20">
                         <div class="h-72 overflow-hidden bg-gray-100 relative">
-                            <!-- SUBSTITUA O SRC ABAIXO PELO CAMINHO DA SUA IMAGEM (ex: imagens/madrinha-4.jpg) -->
-                            <img src="imagens/madrinha-oliva.jpg" alt="Vestido Verde Oliva" class="w-full h-full object-cover">
-                            <span class="absolute bottom-2 left-2 bg-black/60 backdrop-blur-md text-white text-[11px] px-2.5 py-1 rounded-full font-serif">Verde Oliva</span>
+                            <img src="imagens/chocolate.png" alt="Vestido Chocolate" class="w-full h-full object-cover">
+                            <span class="absolute bottom-2 left-2 bg-black/60 backdrop-blur-md text-white text-[11px] px-2.5 py-1 rounded-full font-serif">Chocolate</span>
                         </div>
                         <div class="p-3 text-center">
-                            <p class="text-xs text-gray-600 italic">Sofisticado & Natural</p>
+                            <p class="text-xs text-gray-600 italic">Acheiçoado & Quente</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 7: Laranja Queimado -->
+                    <div class="snap-center flex-shrink-0 w-56 watercolor-card rounded-2xl overflow-hidden shadow-md border border-earth-light/20">
+                        <div class="h-72 overflow-hidden bg-gray-100 relative">
+                            <img src="imagens/laranja-queimado.png" alt="Vestido Laranja Queimado" class="w-full h-full object-cover">
+                            <span class="absolute bottom-2 left-2 bg-black/60 backdrop-blur-md text-white text-[11px] px-2.5 py-1 rounded-full font-serif">Laranja Queimado</span>
+                        </div>
+                        <div class="p-3 text-center">
+                            <p class="text-xs text-gray-600 italic">Moderno & Elegante</p>
                         </div>
                     </div>
 
@@ -370,7 +394,7 @@
                 <p class="text-xs text-gray-500 mt-1">Os detalhes pensados para um visual elegante e alinhado.</p>
             </div>
 
-            <!-- Palette Grid (Cards para os Padrinhos) -->
+            <!-- Palette Grid -->
             <div class="grid grid-cols-2 gap-3 mb-10">
                 <!-- Camisa Branca -->
                 <div class="watercolor-card p-3.5 rounded-2xl swatch-card flex items-center gap-3">
@@ -406,7 +430,7 @@
                 </div>
             </div>
 
-            <!-- Detalhes do Traje (ÚNICA IMAGEM GRANDE PARA O TRAJE COMPLETO) -->
+            <!-- Detalhes do Traje (Imagem Única para Padrinho) -->
             <div class="mb-10">
                 <div class="mb-4">
                     <span class="text-xs uppercase tracking-widest text-earth font-bold block">Composição</span>
@@ -415,8 +439,7 @@
 
                 <div class="watercolor-card rounded-2xl overflow-hidden shadow-sm border border-earth-light/20">
                     <div class="h-80 overflow-hidden bg-gray-100">
-                        <!-- SUBSTITUA O SRC ABAIXO PELO CAMINHO DA SUA IMAGEM ÚNICA (ex: imagens/padrinho-completo.jpg) -->
-                        <img src="imagens/padrinho-traje-completo.jpg" alt="Traje Completo do Padrinho" class="w-full h-full object-cover">
+                        <img src="imagens/padrinho.png" alt="Traje Completo do Padrinho" class="w-full h-full object-cover">
                     </div>
                     <div class="p-3.5 text-center">
                         <h5 class="font-serif font-bold text-sm text-gray-800">Traje Completo</h5>
