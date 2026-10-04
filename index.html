@@ -61,7 +61,7 @@
         /* Aquarela & Textured Cards */
         .watercolor-card {
             position: relative;
-            background: linear-gradient(135deg, rgba(255,255,255,0.92) 0%, rgba(253,251,247,0.85) 100%);
+            background: linear-gradient(135deg, rgba(255,255,255,0.9) 0%, rgba(253,251,247,0.7) 100%);
             backdrop-filter: blur(8px);
             border: 1px solid rgba(166, 124, 82, 0.18);
             box-shadow: 0 10px 25px -5px rgba(139, 94, 60, 0.08), 0 8px 10px -6px rgba(139, 94, 60, 0.04);
@@ -69,7 +69,7 @@
 
         .swatch-card {
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            background-image: radial-gradient(circle at 50% 0%, rgba(255, 255, 255, 0.4), transparent 70%);
+            background-image: radial-gradient(circle at 50% 0%, rgba(255, 255, 255, 0.3), transparent 70%);
         }
 
         .swatch-card:hover, .swatch-card:active {
@@ -103,12 +103,22 @@
         .tab-transition {
             transition: all 0.4s ease-in-out;
         }
+
+        /* Soft Floating Animations */
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-6px); }
+        }
+        .animate-float {
+            animation: float 4s ease-in-out infinite;
+        }
     </style>
 </head>
 <body class="min-h-screen pb-24 text-charcoal bg-floral-top">
 
     <!-- Header Section -->
     <header class="pt-8 pb-6 px-4 text-center max-w-md mx-auto relative">
+        <!-- SVG Botanical Laurel Leaf Decor -->
         <div class="flex justify-center mb-3">
             <svg class="w-16 h-8 text-earth-light opacity-75" viewBox="0 0 100 50" fill="currentColor">
                 <path d="M50 45 C40 30, 20 25, 5 30 C20 20, 35 20, 50 35 C65 20, 80 20, 95 30 C80 25, 60 30, 50 45 Z"></path>
@@ -162,14 +172,16 @@
         <!-- ==================== MADRINHAS TAB ==================== -->
         <div id="content-madrinhas" class="tab-transition block">
             
+            <!-- Paleta de Cores Header -->
             <div class="text-center mb-6">
                 <span class="text-xs uppercase tracking-widest text-earth font-bold block mb-1">Guia de Estilo</span>
                 <h3 class="font-serif text-2xl text-earth-dark font-bold">Paleta de Cores</h3>
                 <p class="text-xs text-gray-500 mt-1">Nossa paleta foi escolhida com carinho para harmonizar o altar.</p>
             </div>
 
-            <!-- Color Swatches Grid -->
+            <!-- Color Palette Swatches Grid -->
             <div class="grid grid-cols-2 gap-3 mb-10">
+                <!-- Terracota -->
                 <div class="watercolor-card p-3.5 rounded-2xl swatch-card flex items-center gap-3">
                     <div class="w-10 h-10 rounded-xl shadow-inner border border-white/50 flex-shrink-0" style="background-color: #B85032;"></div>
                     <div>
@@ -177,6 +189,7 @@
                         <span class="text-[10px] text-gray-500 font-mono uppercase">#B85032</span>
                     </div>
                 </div>
+                <!-- Azul Marinho -->
                 <div class="watercolor-card p-3.5 rounded-2xl swatch-card flex items-center gap-3">
                     <div class="w-10 h-10 rounded-xl shadow-inner border border-white/50 flex-shrink-0" style="background-color: #1F3556;"></div>
                     <div>
@@ -184,6 +197,7 @@
                         <span class="text-[10px] text-gray-500 font-mono uppercase">#1F3556</span>
                     </div>
                 </div>
+                <!-- Mostarda -->
                 <div class="watercolor-card p-3.5 rounded-2xl swatch-card flex items-center gap-3">
                     <div class="w-10 h-10 rounded-xl shadow-inner border border-white/50 flex-shrink-0" style="background-color: #DF9B38;"></div>
                     <div>
@@ -191,6 +205,7 @@
                         <span class="text-[10px] text-gray-500 font-mono uppercase">#DF9B38</span>
                     </div>
                 </div>
+                <!-- Verde Oliva -->
                 <div class="watercolor-card p-3.5 rounded-2xl swatch-card flex items-center gap-3">
                     <div class="w-10 h-10 rounded-xl shadow-inner border border-white/50 flex-shrink-0" style="background-color: #526038;"></div>
                     <div>
@@ -198,6 +213,7 @@
                         <span class="text-[10px] text-gray-500 font-mono uppercase">#526038</span>
                     </div>
                 </div>
+                <!-- Rosa Queimado -->
                 <div class="watercolor-card p-3.5 rounded-2xl swatch-card flex items-center gap-3">
                     <div class="w-10 h-10 rounded-xl shadow-inner border border-white/50 flex-shrink-0" style="background-color: #C27274;"></div>
                     <div>
@@ -205,6 +221,7 @@
                         <span class="text-[10px] text-gray-500 font-mono uppercase">#C27274</span>
                     </div>
                 </div>
+                <!-- Chocolate -->
                 <div class="watercolor-card p-3.5 rounded-2xl swatch-card flex items-center gap-3">
                     <div class="w-10 h-10 rounded-xl shadow-inner border border-white/50 flex-shrink-0" style="background-color: #613C29;"></div>
                     <div>
@@ -212,6 +229,7 @@
                         <span class="text-[10px] text-gray-500 font-mono uppercase">#613C29</span>
                     </div>
                 </div>
+                <!-- Laranja Queimado -->
                 <div class="watercolor-card p-3.5 rounded-2xl swatch-card flex items-center gap-3 col-span-2 max-w-[220px] mx-auto w-full">
                     <div class="w-10 h-10 rounded-xl shadow-inner border border-white/50 flex-shrink-0" style="background-color: #D25A24;"></div>
                     <div>
@@ -221,7 +239,7 @@
                 </div>
             </div>
 
-            <!-- Carousel de Croquis Vetoriais das 7 Cores -->
+            <!-- Modelos Sugeridos (Carrossel com Marcações para suas fotos) -->
             <div class="mb-10">
                 <div class="flex justify-between items-end mb-4">
                     <div>
@@ -231,117 +249,54 @@
                     <span class="text-xs text-earth-light italic">Arraste para o lado &rarr;</span>
                 </div>
 
+                <!-- Horizontal Carousel -->
                 <div class="flex gap-4 overflow-x-auto no-scrollbar pb-4 -mx-4 px-4 snap-x snap-mandatory">
                     
-                    <!-- Croqui 1: Terracota -->
+                    <!-- Card 1: Terracota -->
                     <div class="snap-center flex-shrink-0 w-56 watercolor-card rounded-2xl overflow-hidden shadow-md border border-earth-light/20">
-                        <div class="h-72 bg-gradient-to-b from-amber-50/50 to-orange-50/30 flex items-center justify-center p-4 relative">
-                            <svg class="w-full h-full drop-shadow-md" viewBox="0 0 100 200" fill="none">
-                                <path d="M42 35 C45 35 55 35 58 35 L56 50 C56 55 44 55 44 50 Z" fill="#B85032" opacity="0.9"/>
-                                <path d="M45 50 C48 65 52 65 55 50 C62 75 68 110 75 180 C55 185 45 185 25 180 C32 110 38 75 45 50 Z" fill="#B85032"/>
-                                <path d="M47 50 Q50 110 30 180 M53 50 Q50 110 70 180" stroke="rgba(255,255,255,0.25)" stroke-width="1.5"/>
-                                <path d="M48 20 C48 15 52 15 52 20 L50 35 Z" stroke="#8B5E3C" stroke-width="1" stroke-dasharray="2 2"/>
-                            </svg>
-                            <span class="absolute bottom-3 left-3 bg-white/80 backdrop-blur-md text-earth-dark text-[11px] px-3 py-1 rounded-full font-serif font-semibold border border-earth-light/20">Terracota</span>
+                        <div class="h-72 overflow-hidden bg-gray-100 relative">
+                            <!-- SUBSTITUA O SRC ABAIXO PELO CAMINHO DA SUA IMAGEM (ex: imagens/madrinha-1.jpg) -->
+                            <img src="imagens/madrinha-terracota.jpg" alt="Vestido Terracota" class="w-full h-full object-cover">
+                            <span class="absolute bottom-2 left-2 bg-black/60 backdrop-blur-md text-white text-[11px] px-2.5 py-1 rounded-full font-serif">Terracota</span>
                         </div>
                         <div class="p-3 text-center">
                             <p class="text-xs text-gray-600 italic">Fluidez & Elegância</p>
                         </div>
                     </div>
 
-                    <!-- Croqui 2: Azul Marinho -->
+                    <!-- Card 2: Azul Marinho -->
                     <div class="snap-center flex-shrink-0 w-56 watercolor-card rounded-2xl overflow-hidden shadow-md border border-earth-light/20">
-                        <div class="h-72 bg-gradient-to-b from-slate-50/50 to-blue-50/30 flex items-center justify-center p-4 relative">
-                            <svg class="w-full h-full drop-shadow-md" viewBox="0 0 100 200" fill="none">
-                                <path d="M44 32 Q50 40 56 32 L58 50 Q50 54 42 50 Z" fill="#1F3556" opacity="0.9"/>
-                                <path d="M42 50 C48 65 52 65 58 50 C66 80 72 120 78 180 C58 184 42 184 22 180 C28 120 34 80 42 50 Z" fill="#1F3556"/>
-                                <path d="M50 52 Q45 110 25 180 M50 52 Q55 110 75 180" stroke="rgba(255,255,255,0.2)" stroke-width="1.5"/>
-                                <path d="M47 18 C47 12 53 12 53 18 L50 32 Z" stroke="#8B5E3C" stroke-width="1" stroke-dasharray="2 2"/>
-                            </svg>
-                            <span class="absolute bottom-3 left-3 bg-white/80 backdrop-blur-md text-earth-dark text-[11px] px-3 py-1 rounded-full font-serif font-semibold border border-earth-light/20">Azul Marinho</span>
+                        <div class="h-72 overflow-hidden bg-gray-100 relative">
+                            <!-- SUBSTITUA O SRC ABAIXO PELO CAMINHO DA SUA IMAGEM (ex: imagens/madrinha-2.jpg) -->
+                            <img src="imagens/madrinha-azul.jpg" alt="Vestido Azul Marinho" class="w-full h-full object-cover">
+                            <span class="absolute bottom-2 left-2 bg-black/60 backdrop-blur-md text-white text-[11px] px-2.5 py-1 rounded-full font-serif">Azul Marinho</span>
                         </div>
                         <div class="p-3 text-center">
                             <p class="text-xs text-gray-600 italic">Clássico & Atemporal</p>
                         </div>
                     </div>
 
-                    <!-- Croqui 3: Mostarda -->
+                    <!-- Card 3: Rosa Queimado -->
                     <div class="snap-center flex-shrink-0 w-56 watercolor-card rounded-2xl overflow-hidden shadow-md border border-earth-light/20">
-                        <div class="h-72 bg-gradient-to-b from-amber-50/50 to-yellow-50/30 flex items-center justify-center p-4 relative">
-                            <svg class="w-full h-full drop-shadow-md" viewBox="0 0 100 200" fill="none">
-                                <path d="M43 34 L57 34 L55 50 L45 50 Z" fill="#DF9B38" opacity="0.9"/>
-                                <path d="M45 50 C48 65 52 65 55 50 C64 78 70 115 76 180 C56 185 44 185 24 180 C30 115 36 78 45 50 Z" fill="#DF9B38"/>
-                                <path d="M48 50 Q42 110 28 180 M52 50 Q58 110 72 180" stroke="rgba(255,255,255,0.3)" stroke-width="1.5"/>
-                                <path d="M48 20 L50 34 M52 20 L50 34" stroke="#8B5E3C" stroke-width="1" stroke-dasharray="2 2"/>
-                            </svg>
-                            <span class="absolute bottom-3 left-3 bg-white/80 backdrop-blur-md text-earth-dark text-[11px] px-3 py-1 rounded-full font-serif font-semibold border border-earth-light/20">Mostarda</span>
-                        </div>
-                        <div class="p-3 text-center">
-                            <p class="text-xs text-gray-600 italic">Vibrante & Sofisticado</p>
-                        </div>
-                    </div>
-
-                    <!-- Croqui 4: Verde Oliva -->
-                    <div class="snap-center flex-shrink-0 w-56 watercolor-card rounded-2xl overflow-hidden shadow-md border border-earth-light/20">
-                        <div class="h-72 bg-gradient-to-b from-stone-50/50 to-emerald-50/30 flex items-center justify-center p-4 relative">
-                            <svg class="w-full h-full drop-shadow-md" viewBox="0 0 100 200" fill="none">
-                                <path d="M42 33 C48 30 54 38 58 35 L55 50 L45 50 Z" fill="#526038" opacity="0.9"/>
-                                <path d="M45 50 C48 65 52 65 55 50 C63 76 69 112 75 180 C55 183 45 183 25 180 C31 112 37 76 45 50 Z" fill="#526038"/>
-                                <path d="M46 50 Q40 105 29 180 M54 50 Q60 105 71 180" stroke="rgba(255,255,255,0.25)" stroke-width="1.5"/>
-                                <path d="M48 18 C48 14 52 14 52 18 L50 33 Z" stroke="#8B5E3C" stroke-width="1" stroke-dasharray="2 2"/>
-                            </svg>
-                            <span class="absolute bottom-3 left-3 bg-white/80 backdrop-blur-md text-earth-dark text-[11px] px-3 py-1 rounded-full font-serif font-semibold border border-earth-light/20">Verde Oliva</span>
-                        </div>
-                        <div class="p-3 text-center">
-                            <p class="text-xs text-gray-600 italic">Natural & Harmonioso</p>
-                        </div>
-                    </div>
-
-                    <!-- Croqui 5: Rosa Queimado -->
-                    <div class="snap-center flex-shrink-0 w-56 watercolor-card rounded-2xl overflow-hidden shadow-md border border-earth-light/20">
-                        <div class="h-72 bg-gradient-to-b from-rose-50/50 to-pink-50/30 flex items-center justify-center p-4 relative">
-                            <svg class="w-full h-full drop-shadow-md" viewBox="0 0 100 200" fill="none">
-                                <path d="M43 35 L57 35 L56 50 L44 50 Z" fill="#C27274" opacity="0.9"/>
-                                <path d="M44 50 C48 65 52 65 56 50 C65 79 71 116 77 180 C57 184 43 184 23 180 C29 116 35 79 44 50 Z" fill="#C27274"/>
-                                <path d="M47 50 Q41 108 27 180 M53 50 Q59 108 73 180" stroke="rgba(255,255,255,0.3)" stroke-width="1.5"/>
-                                <path d="M48 20 C48 15 52 15 52 20 L50 35 Z" stroke="#8B5E3C" stroke-width="1" stroke-dasharray="2 2"/>
-                            </svg>
-                            <span class="absolute bottom-3 left-3 bg-white/80 backdrop-blur-md text-earth-dark text-[11px] px-3 py-1 rounded-full font-serif font-semibold border border-earth-light/20">Rosa Queimado</span>
+                        <div class="h-72 overflow-hidden bg-gray-100 relative">
+                            <!-- SUBSTITUA O SRC ABAIXO PELO CAMINHO DA SUA IMAGEM (ex: imagens/madrinha-3.jpg) -->
+                            <img src="imagens/madrinha-rosa.jpg" alt="Vestido Rosa Queimado" class="w-full h-full object-cover">
+                            <span class="absolute bottom-2 left-2 bg-black/60 backdrop-blur-md text-white text-[11px] px-2.5 py-1 rounded-full font-serif">Rosa Queimado</span>
                         </div>
                         <div class="p-3 text-center">
                             <p class="text-xs text-gray-600 italic">Romântico & Delicado</p>
                         </div>
                     </div>
 
-                    <!-- Croqui 6: Chocolate -->
+                    <!-- Card 4: Verde Oliva -->
                     <div class="snap-center flex-shrink-0 w-56 watercolor-card rounded-2xl overflow-hidden shadow-md border border-earth-light/20">
-                        <div class="h-72 bg-gradient-to-b from-stone-100/60 to-amber-900/10 flex items-center justify-center p-4 relative">
-                            <svg class="w-full h-full drop-shadow-md" viewBox="0 0 100 200" fill="none">
-                                <path d="M42 34 Q50 38 58 34 L55 50 L45 50 Z" fill="#613C29" opacity="0.92"/>
-                                <path d="M45 50 C48 65 52 65 55 50 C63 77 69 114 75 180 C55 183 45 183 25 180 C31 114 37 77 45 50 Z" fill="#613C29"/>
-                                <path d="M47 50 Q42 108 28 180 M53 50 Q58 108 72 180" stroke="rgba(255,255,255,0.2)" stroke-width="1.5"/>
-                                <path d="M48 19 L50 34 M52 19 L50 34" stroke="#8B5E3C" stroke-width="1" stroke-dasharray="2 2"/>
-                            </svg>
-                            <span class="absolute bottom-3 left-3 bg-white/80 backdrop-blur-md text-earth-dark text-[11px] px-3 py-1 rounded-full font-serif font-semibold border border-earth-light/20">Chocolate</span>
+                        <div class="h-72 overflow-hidden bg-gray-100 relative">
+                            <!-- SUBSTITUA O SRC ABAIXO PELO CAMINHO DA SUA IMAGEM (ex: imagens/madrinha-4.jpg) -->
+                            <img src="imagens/madrinha-oliva.jpg" alt="Vestido Verde Oliva" class="w-full h-full object-cover">
+                            <span class="absolute bottom-2 left-2 bg-black/60 backdrop-blur-md text-white text-[11px] px-2.5 py-1 rounded-full font-serif">Verde Oliva</span>
                         </div>
                         <div class="p-3 text-center">
-                            <p class="text-xs text-gray-600 italic">Marcante & Quente</p>
-                        </div>
-                    </div>
-
-                    <!-- Croqui 7: Laranja Queimado -->
-                    <div class="snap-center flex-shrink-0 w-56 watercolor-card rounded-2xl overflow-hidden shadow-md border border-earth-light/20">
-                        <div class="h-72 bg-gradient-to-b from-orange-50/60 to-amber-100/40 flex items-center justify-center p-4 relative">
-                            <svg class="w-full h-full drop-shadow-md" viewBox="0 0 100 200" fill="none">
-                                <path d="M43 33 C47 36 53 36 57 33 L55 50 L45 50 Z" fill="#D25A24" opacity="0.9"/>
-                                <path d="M45 50 C48 65 52 65 55 50 C64 78 70 115 76 180 C56 184 44 184 24 180 C30 115 36 78 45 50 Z" fill="#D25A24"/>
-                                <path d="M48 50 Q41 108 27 180 M52 50 Q59 108 73 180" stroke="rgba(255,255,255,0.3)" stroke-width="1.5"/>
-                                <path d="M48 18 C48 14 52 14 52 18 L50 33 Z" stroke="#8B5E3C" stroke-width="1" stroke-dasharray="2 2"/>
-                            </svg>
-                            <span class="absolute bottom-3 left-3 bg-white/80 backdrop-blur-md text-earth-dark text-[11px] px-3 py-1 rounded-full font-serif font-semibold border border-earth-light/20">Laranja Queimado</span>
-                        </div>
-                        <div class="p-3 text-center">
-                            <p class="text-xs text-gray-600 italic">Aconchegante & Moderno</p>
+                            <p class="text-xs text-gray-600 italic">Sofisticado & Natural</p>
                         </div>
                     </div>
 
@@ -408,14 +363,16 @@
         <!-- ==================== PADRINHOS TAB ==================== -->
         <div id="content-padrinhos" class="tab-transition hidden">
             
+            <!-- Paleta de Cores & Detalhes Header -->
             <div class="text-center mb-6">
                 <span class="text-xs uppercase tracking-widest text-earth font-bold block mb-1">Guia de Traje</span>
                 <h3 class="font-serif text-2xl text-earth-dark font-bold">Paleta de Cores & Look</h3>
                 <p class="text-xs text-gray-500 mt-1">Os detalhes pensados para um visual elegante e alinhado.</p>
             </div>
 
-            <!-- Palette Grid -->
+            <!-- Palette Grid (Cards para os Padrinhos) -->
             <div class="grid grid-cols-2 gap-3 mb-10">
+                <!-- Camisa Branca -->
                 <div class="watercolor-card p-3.5 rounded-2xl swatch-card flex items-center gap-3">
                     <div class="w-10 h-10 rounded-xl shadow-inner border border-gray-300 flex-shrink-0" style="background-color: #FFFFFF;"></div>
                     <div>
@@ -423,6 +380,7 @@
                         <span class="text-[10px] text-gray-500 font-sans">Clássica</span>
                     </div>
                 </div>
+                <!-- Terno Preto -->
                 <div class="watercolor-card p-3.5 rounded-2xl swatch-card flex items-center gap-3">
                     <div class="w-10 h-10 rounded-xl shadow-inner border border-white/50 flex-shrink-0" style="background-color: #1A1A1A;"></div>
                     <div>
@@ -430,6 +388,7 @@
                         <span class="text-[10px] text-gray-500 font-sans">Alinhado</span>
                     </div>
                 </div>
+                <!-- Gravata Marsala -->
                 <div class="watercolor-card p-3.5 rounded-2xl swatch-card flex items-center gap-3">
                     <div class="w-10 h-10 rounded-xl shadow-inner border border-white/50 flex-shrink-0" style="background-color: #6B2D38;"></div>
                     <div>
@@ -437,6 +396,7 @@
                         <span class="text-[10px] text-gray-500 font-sans">Destaque</span>
                     </div>
                 </div>
+                <!-- Sapato Preto -->
                 <div class="watercolor-card p-3.5 rounded-2xl swatch-card flex items-center gap-3">
                     <div class="w-10 h-10 rounded-xl shadow-inner border border-white/50 flex-shrink-0" style="background-color: #222222;"></div>
                     <div>
@@ -446,67 +406,21 @@
                 </div>
             </div>
 
-            <!-- Detalhes do Traje (Ilustrações Vetoriais Minimalistas) -->
+            <!-- Detalhes do Traje (ÚNICA IMAGEM GRANDE PARA O TRAJE COMPLETO) -->
             <div class="mb-10">
                 <div class="mb-4">
                     <span class="text-xs uppercase tracking-widest text-earth font-bold block">Composição</span>
                     <h3 class="font-serif text-2xl text-earth-dark font-bold">Detalhes do Look</h3>
                 </div>
 
-                <div class="grid grid-cols-2 gap-3">
-                    <!-- Gravata Marsala -->
-                    <div class="watercolor-card rounded-2xl overflow-hidden shadow-sm border border-earth-light/20 p-4 text-center">
-                        <div class="h-28 flex items-center justify-center bg-stone-50/50 rounded-xl mb-2">
-                            <svg class="w-16 h-20 drop-shadow-sm" viewBox="0 0 60 80" fill="none">
-                                <path d="M25 10 L35 10 L33 22 L27 22 Z" fill="#6B2D38"/>
-                                <path d="M27 22 L33 22 L38 65 L30 75 L22 65 Z" fill="#6B2D38"/>
-                                <path d="M30 22 L30 75" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
-                            </svg>
-                        </div>
-                        <h5 class="font-serif font-bold text-xs text-gray-800">Gravata Marsala</h5>
-                        <p class="text-[10px] text-earth italic">Acessório fornecido/indicado</p>
+                <div class="watercolor-card rounded-2xl overflow-hidden shadow-sm border border-earth-light/20">
+                    <div class="h-80 overflow-hidden bg-gray-100">
+                        <!-- SUBSTITUA O SRC ABAIXO PELO CAMINHO DA SUA IMAGEM ÚNICA (ex: imagens/padrinho-completo.jpg) -->
+                        <img src="imagens/padrinho-traje-completo.jpg" alt="Traje Completo do Padrinho" class="w-full h-full object-cover">
                     </div>
-
-                    <!-- Terno Preto -->
-                    <div class="watercolor-card rounded-2xl overflow-hidden shadow-sm border border-earth-light/20 p-4 text-center">
-                        <div class="h-28 flex items-center justify-center bg-stone-50/50 rounded-xl mb-2">
-                            <svg class="w-20 h-20 drop-shadow-sm" viewBox="0 0 80 80" fill="none">
-                                <path d="M15 15 L32 20 L30 70 L10 65 Z" fill="#1A1A1A"/>
-                                <path d="M65 15 L48 20 L50 70 L70 65 Z" fill="#1A1A1A"/>
-                                <path d="M32 20 L48 20 L40 55 Z" fill="#FFFFFF"/>
-                                <path d="M38 20 L42 20 L41 45 L40 48 L39 45 Z" fill="#6B2D38"/>
-                            </svg>
-                        </div>
-                        <h5 class="font-serif font-bold text-xs text-gray-800">Terno Preto</h5>
-                        <p class="text-[10px] text-earth italic">Corte Tradicional ou Slim</p>
-                    </div>
-
-                    <!-- Camisa Branca -->
-                    <div class="watercolor-card rounded-2xl overflow-hidden shadow-sm border border-earth-light/20 p-4 text-center">
-                        <div class="h-28 flex items-center justify-center bg-stone-50/50 rounded-xl mb-2">
-                            <svg class="w-20 h-20 drop-shadow-sm" viewBox="0 0 80 80" fill="none">
-                                <path d="M20 20 L32 15 L40 22 L48 15 L60 20 L58 70 L22 70 Z" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1"/>
-                                <path d="M32 15 L40 25 L48 15" stroke="#D1D5DB" stroke-width="1.5"/>
-                                <circle cx="40" cy="35" r="1.5" fill="#9CA3AF"/>
-                                <circle cx="40" cy="48" r="1.5" fill="#9CA3AF"/>
-                                <circle cx="40" cy="61" r="1.5" fill="#9CA3AF"/>
-                            </svg>
-                        </div>
-                        <h5 class="font-serif font-bold text-xs text-gray-800">Camisa Branca</h5>
-                        <p class="text-[10px] text-earth italic">Manga longa social</p>
-                    </div>
-
-                    <!-- Sapato Preto -->
-                    <div class="watercolor-card rounded-2xl overflow-hidden shadow-sm border border-earth-light/20 p-4 text-center">
-                        <div class="h-28 flex items-center justify-center bg-stone-50/50 rounded-xl mb-2">
-                            <svg class="w-20 h-16 drop-shadow-sm" viewBox="0 0 80 60" fill="none">
-                                <path d="M10 38 C15 35 30 30 50 32 C65 33 72 40 70 46 C68 49 10 50 10 38 Z" fill="#222222"/>
-                                <path d="M12 46 L68 46 L66 50 L10 50 Z" fill="#111111"/>
-                                <path d="M32 32 C35 28 42 28 45 32" stroke="#444444" stroke-width="1"/>
-                            </svg>
-                        </div>
-                        <h5 class="font-serif font-bold text-xs text-gray-800">Sapato Preto</h5>
-                        <p class="text-[10px] text-earth italic">Modelo social limpo</p>
+                    <div class="p-3.5 text-center">
+                        <h5 class="font-serif font-bold text-sm text-gray-800">Traje Completo</h5>
+                        <p class="text-xs text-earth italic mt-0.5">Terno preto, camisa branca, gravata marsala e sapato preto</p>
                     </div>
                 </div>
             </div>
@@ -586,7 +500,7 @@
         }
     </script>
 
-    <!-- Bottom Decorative Footer -->
+    <!-- Bottom Decorative Foliage -->
     <footer class="text-center mt-12 mb-8 text-gray-400 text-xs font-serif">
         <div class="flex justify-center items-center gap-2 mb-2">
             <div class="w-12 h-px bg-earth-light/30"></div>
