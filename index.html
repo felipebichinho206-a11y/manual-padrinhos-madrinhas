@@ -1,762 +1,599 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Manual dos Padrinhos e Madrinhas | Bianca & Felipe</title>
-  
-  <!-- Tailwind CSS -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            weddingBg: '#FAF6F0',
-            weddingCard: '#FFFFFF',
-            burgundy: '#5C1D24',
-            burgundyLight: '#7A2832',
-            gold: '#D4AF37',
-            goldDark: '#B38F24',
-            olive: '#556B2F',
-            terracota: '#C15C3D',
-            navy: '#1B365D',
-            mustard: '#E2A036',
-            rose: '#C27D7F',
-            chocolate: '#5B3A29',
-            burntOrange: '#D95D24',
-            marsala: '#6B1D2F'
-          },
-          fontFamily: {
-            serif: ['Cormorant Garamond', 'Georgia', 'serif'],
-            script: ['Alex Brush', 'cursive'],
-            sans: ['Montserrat', 'sans-serif']
-          }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manual dos Padrinhos e Madrinhas | Bianca & Felipe</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Great+Vibes&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cream: '#FDFBF7',
+                        'cream-accent': '#F5EFE6',
+                        earth: '#8B5E3C',
+                        'earth-light': '#A67C52',
+                        'earth-dark': '#5C3D26',
+                        charcoal: '#2C2A29',
+                        madrinha: {
+                            terracota: '#B85032',
+                            marinho: '#1F3556',
+                            mostarda: '#DF9B38',
+                            oliva: '#526038',
+                            rosaqueimado: '#C27274',
+                            chocolate: '#613C29',
+                            laranjaqueimado: '#D25A24'
+                        },
+                        padrinho: {
+                            camisa: '#FFFFFF',
+                            terno: '#1A1A1A',
+                            gravata: '#6B2D38',
+                            sapato: '#222222'
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['"Cormorant Garamond"', 'serif'],
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        script: ['"Great Vibes"', '"Alex Brush"', 'cursive']
+                    }
+                }
+            }
         }
-      }
-    }
-  </script>
+    </script>
 
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #FDFBF7;
+            color: #2C2A29;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            overflow-x: hidden;
+        }
 
-  <style>
-    /* Custom scrollbar */
-    ::-webkit-scrollbar {
-      width: 8px;
-    }
-    ::-webkit-scrollbar-track {
-      background: #FAF6F0;
-    }
-    ::-webkit-scrollbar-thumb {
-      background: #D4AF37;
-      border-radius: 4px;
-    }
+        /* Aquarela & Textured Cards */
+        .watercolor-card {
+            position: relative;
+            background: linear-gradient(135deg, rgba(255,255,255,0.92) 0%, rgba(253,251,247,0.85) 100%);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(166, 124, 82, 0.18);
+            box-shadow: 0 10px 25px -5px rgba(139, 94, 60, 0.08), 0 8px 10px -6px rgba(139, 94, 60, 0.04);
+        }
 
-    /* Print styles for easy saving as PDF */
-    @media print {
-      .no-print { display: none !important; }
-      body { background: white !important; }
-      .shadow-xl, .shadow-md { box-shadow: none !important; }
-    }
+        .swatch-card {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            background-image: radial-gradient(circle at 50% 0%, rgba(255, 255, 255, 0.4), transparent 70%);
+        }
 
-    /* Toast notification animation */
-    @keyframes fadeInOut {
-      0% { opacity: 0; transform: translateY(20px); }
-      15% { opacity: 1; transform: translateY(0); }
-      85% { opacity: 1; transform: translateY(0); }
-      100% { opacity: 0; transform: translateY(20px); }
-    }
-    .toast-anim {
-      animation: fadeInOut 2.5s forwards;
-    }
-  </style>
+        .swatch-card:hover, .swatch-card:active {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 20px -3px rgba(0, 0, 0, 0.12);
+        }
+
+        /* Custom Scrollbar for Carousel */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        /* Floral Frame Backgrounds */
+        .bg-floral-top {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 800 200'%3E%3Cg fill='%23A67C52' fill-opacity='0.08'%3E%3Cpath d='M100 20c-20 0-40 10-50 30-10-20-30-30-50-30 0 40 30 70 50 100 20-30 50-60 50-100zM750 20c-20 0-40 10-50 30-10-20-30-30-50-30 0 40 30 70 50 100 20-30 50-60 50-100z'/%3E%3Cpath d='M400 10c-30 0-60 15-75 45-15-30-45-45-75-45 0 60 45 105 75 150 30-45 75-90 75-150z'/%3E%3C/g%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: top center;
+            background-size: contain;
+        }
+
+        .active-tab {
+            background-color: #8B5E3C !important;
+            color: #FFFFFF !important;
+            box-shadow: 0 4px 14px rgba(139, 94, 60, 0.35);
+        }
+
+        .tab-transition {
+            transition: all 0.4s ease-in-out;
+        }
+    </style>
 </head>
-<body class="bg-weddingBg text-gray-800 font-sans min-h-screen relative overflow-x-hidden selection:bg-gold/30 selection:text-burgundy">
+<body class="min-h-screen pb-24 text-charcoal bg-floral-top">
 
-  <!-- Top Left Floral Accent -->
-  <div class="absolute top-0 left-0 pointer-events-none w-48 sm:w-72 lg:w-96 text-burgundy/15 z-0">
-    <svg viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M10 10 Q 100 80, 180 30 Q 120 120, 250 150 Q 150 180, 10 280 Z" fill="currentColor" opacity="0.3"/>
-      <circle cx="40" cy="50" r="15" fill="#C15C3D" opacity="0.2"/>
-      <circle cx="80" cy="90" r="12" fill="#556B2F" opacity="0.25"/>
-      <path d="M 0 0 C 100 50, 50 150, 0 200 Z" fill="#6B1D2F" opacity="0.15"/>
-      <!-- Leaves design -->
-      <path d="M30,10 Q60,5 70,30 Q40,35 30,10 Z" fill="#556B2F" opacity="0.4"/>
-      <path d="M70,30 Q100,20 110,50 Q80,55 70,30 Z" fill="#556B2F" opacity="0.4"/>
-      <path d="M10,40 Q30,70 5,90 Q-10,60 10,40 Z" fill="#C15C3D" opacity="0.3"/>
-    </svg>
-  </div>
+    <!-- Header Section -->
+    <header class="pt-8 pb-6 px-4 text-center max-w-md mx-auto relative">
+        <div class="flex justify-center mb-3">
+            <svg class="w-16 h-8 text-earth-light opacity-75" viewBox="0 0 100 50" fill="currentColor">
+                <path d="M50 45 C40 30, 20 25, 5 30 C20 20, 35 20, 50 35 C65 20, 80 20, 95 30 C80 25, 60 30, 50 45 Z"></path>
+                <circle cx="50" cy="12" r="3" fill="#8B5E3C"></circle>
+                <circle cx="42" cy="18" r="2" fill="#A67C52"></circle>
+                <circle cx="58" cy="18" r="2" fill="#A67C52"></circle>
+            </svg>
+        </div>
 
-  <!-- Top Right Floral Accent -->
-  <div class="absolute top-0 right-0 pointer-events-none w-48 sm:w-72 lg:w-96 text-burgundy/15 z-0 transform scale-x-[-1]">
-    <svg viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M10 10 Q 100 80, 180 30 Q 120 120, 250 150 Q 150 180, 10 280 Z" fill="currentColor" opacity="0.3"/>
-      <circle cx="40" cy="50" r="15" fill="#C15C3D" opacity="0.2"/>
-      <circle cx="80" cy="90" r="12" fill="#556B2F" opacity="0.25"/>
-    </svg>
-  </div>
-
-  <!-- Bottom Corner Accents -->
-  <div class="absolute bottom-0 left-0 pointer-events-none w-48 sm:w-72 text-burgundy/15 z-0 transform scale-y-[-1]">
-    <svg viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M10 10 Q 100 80, 180 30 Q 120 120, 250 150 Z" fill="currentColor" opacity="0.25"/>
-    </svg>
-  </div>
-  <div class="absolute bottom-0 right-0 pointer-events-none w-48 sm:w-72 text-burgundy/15 z-0 transform scale-x-[-1] scale-y-[-1]">
-    <svg viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M10 10 Q 100 80, 180 30 Q 120 120, 250 150 Z" fill="currentColor" opacity="0.25"/>
-    </svg>
-  </div>
-
-  <!-- Main Container -->
-  <div class="max-w-5xl mx-auto px-4 py-8 sm:py-12 relative z-10">
-
-    <header class="text-center mb-10">
-      <!-- Cross & Leaves Icon -->
-      <div class="inline-flex items-center justify-center mb-3 text-burgundy">
-        <svg class="w-12 h-12" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5">
-          <!-- Delicate Cross -->
-          <line x1="32" y1="12" x2="32" y2="52" stroke="#5C1D24" stroke-width="2" stroke-linecap="round"/>
-          <line x1="20" y1="24" x2="44" y2="24" stroke="#5C1D24" stroke-width="2" stroke-linecap="round"/>
-          <!-- Subtle Laurel branch wreath around cross -->
-          <path d="M18 36 C16 28 22 18 32 16 C42 18 48 28 46 36" stroke="#556B2F" stroke-width="1.2" stroke-dasharray="2 2"/>
-          <path d="M 22 28 C 18 26 16 20 22 18" fill="#556B2F" opacity="0.4"/>
-          <path d="M 42 28 C 46 26 48 20 42 18" fill="#556B2F" opacity="0.4"/>
-        </svg>
-      </div>
-
-      <!-- Verse Quote -->
-      <div class="mb-4">
-        <p class="font-serif italic text-lg sm:text-xl text-burgundy font-medium tracking-wide">
-          &ldquo;O amor jamais acabará.&rdquo;
+        <p class="font-serif italic text-earth text-sm tracking-wide mb-1">
+            "O amor jamais acabará."
         </p>
-        <p class="text-xs uppercase tracking-widest text-burgundy/70 mt-0.5">1 Coríntios 13:8</p>
-      </div>
+        <span class="text-xs uppercase tracking-widest text-earth-light font-semibold block mb-4">1 Coríntios 13:8</span>
 
-      <!-- Title & Divider Lines -->
-      <div class="flex items-center justify-center my-4 space-x-3">
-        <div class="h-px bg-gradient-to-r from-transparent via-gold to-burgundy/40 w-16 sm:w-32"></div>
-        <h1 class="font-serif text-3xl sm:text-5xl lg:text-6xl text-burgundy font-bold tracking-wider uppercase">
-          Manual dos Padrinhos
+        <h1 class="font-serif text-3xl sm:text-4xl font-bold tracking-tight text-earth-dark uppercase mb-1">
+            Manual dos Padrinhos
         </h1>
-        <div class="h-px bg-gradient-to-l from-transparent via-gold to-burgundy/40 w-16 sm:w-32"></div>
-      </div>
+        <h2 class="font-serif text-xl sm:text-2xl font-light italic text-earth mb-4">
+            & Madrinhas
+        </h2>
 
-      <p class="text-xs sm:text-sm uppercase tracking-[0.25em] text-gray-700 font-semibold mb-2">
-        Juntos neste dia tão especial
-      </p>
-      
-      <p class="font-script text-2xl sm:text-3xl text-burgundyLight max-w-xl mx-auto mt-2 leading-relaxed">
-        Mais do que um convite ou traje, é sobre estar presente de forma única e verdadeira.
-      </p>
+        <div class="w-24 h-0.5 bg-gradient-to-r from-transparent via-earth-light to-transparent mx-auto mb-4"></div>
+
+        <p class="font-serif italic text-base text-gray-700 px-4 leading-relaxed mb-4">
+            Juntas e juntos neste dia tão especial.<br>
+            <span class="text-xs font-sans not-italic text-gray-600 block mt-2">
+                Mais do que um convite ou vestido, é sobre estar presente de forma única e verdadeira.
+            </span>
+        </p>
+
+        <p class="font-script text-3xl text-earth-dark mt-2 tracking-wide">
+            Bianca & Felipe
+        </p>
     </header>
 
-    <nav class="no-print flex justify-center mb-10">
-      <div class="bg-white/80 backdrop-blur border border-gold/40 p-1.5 rounded-full shadow-md flex space-x-1 sm:space-x-2">
-        <button id="btn-all" onclick="switchTab('all')" class="tab-btn px-4 sm:px-6 py-2 rounded-full text-xs sm:text-sm font-semibold tracking-wider transition-all duration-300 bg-burgundy text-white shadow">
-          TODOS
-        </button>
-        <button id="btn-madrinhas" onclick="switchTab('madrinhas')" class="tab-btn px-4 sm:px-6 py-2 rounded-full text-xs sm:text-sm font-semibold tracking-wider transition-all duration-300 text-burgundy hover:bg-burgundy/10">
-          MADRINHAS
-        </button>
-        <button id="btn-padrinhos" onclick="switchTab('padrinhos')" class="tab-btn px-4 sm:px-6 py-2 rounded-full text-xs sm:text-sm font-semibold tracking-wider transition-all duration-300 text-burgundy hover:bg-burgundy/10">
-          PADRINHAS/PADRINHOS
-        </button>
-      </div>
-    </nav>
-
-    <section id="section-madrinhas" class="mb-16 transition-all duration-500">
-      <!-- Section Header -->
-      <div class="bg-white/90 rounded-2xl p-6 sm:p-10 shadow-lg border border-gold/30 mb-8 relative overflow-hidden">
-        <div class="absolute top-0 right-0 w-24 h-24 bg-gradient-to-bl from-rose/20 to-transparent rounded-bl-full pointer-events-none"></div>
-
-        <div class="text-center mb-8">
-          <span class="text-xs font-bold uppercase tracking-widest text-goldDark">Vestuário e Dicas</span>
-          <h2 class="font-serif text-3xl sm:text-4xl text-burgundy font-bold mt-1 uppercase tracking-wide">
-            Manual das Madrinhas
-          </h2>
-          <div class="w-16 h-0.5 bg-gold mx-auto mt-2"></div>
+    <!-- Navigation Tabs -->
+    <section class="max-w-md mx-auto px-4 mb-8 sticky top-3 z-40">
+        <div class="bg-white/90 backdrop-blur-md p-1.5 rounded-full shadow-lg border border-earth-light/20 flex justify-between gap-1">
+            <button id="tab-madrinhas" onclick="switchTab('madrinhas')" class="tab-transition flex-1 py-3 px-4 rounded-full font-serif text-sm font-semibold tracking-wider flex items-center justify-center gap-2 active-tab">
+                <span>🌸</span> MADRINHAS
+            </button>
+            <button id="tab-padrinhos" onclick="switchTab('padrinhos')" class="tab-transition flex-1 py-3 px-4 rounded-full font-serif text-sm font-semibold tracking-wider text-earth hover:bg-cream-accent/50 flex items-center justify-center gap-2">
+                <span>👔</span> PADRINHOS
+            </button>
         </div>
-
-        <!-- Color Palette Title -->
-        <div class="flex items-center justify-center my-6">
-          <div class="h-px bg-burgundy/20 w-12 sm:w-24"></div>
-          <h3 class="font-serif text-lg sm:text-xl text-burgundy font-semibold px-4 tracking-wider uppercase">
-            Paleta de Cores das Madrinhas
-          </h3>
-          <div class="h-px bg-burgundy/20 w-12 sm:w-24"></div>
-        </div>
-        <p class="text-center text-xs text-gray-500 mb-6 italic">Clique em qualquer cor para copiar o código HEX</p>
-
-        <!-- Color Swatches Grid -->
-        <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-7 gap-4 sm:gap-3 text-center mb-10">
-          <!-- Terracota -->
-          <div onclick="copyColor('#C15C3D', 'Terracota')" class="group cursor-pointer p-3 rounded-xl hover:bg-weddingBg transition-all transform hover:-translate-y-1">
-            <div class="w-14 h-14 sm:w-16 sm:h-16 mx-auto rounded-full bg-terracota shadow-md border-2 border-white ring-2 ring-terracota/30 group-hover:scale-105 transition-transform"></div>
-            <span class="block mt-2 text-xs font-bold text-burgundy uppercase tracking-wider">Terracota</span>
-            <span class="text-[10px] text-gray-400 font-mono">#C15C3D</span>
-          </div>
-
-          <!-- Azul Marinho -->
-          <div onclick="copyColor('#1B365D', 'Azul Marinho')" class="group cursor-pointer p-3 rounded-xl hover:bg-weddingBg transition-all transform hover:-translate-y-1">
-            <div class="w-14 h-14 sm:w-16 sm:h-16 mx-auto rounded-full bg-navy shadow-md border-2 border-white ring-2 ring-navy/30 group-hover:scale-105 transition-transform"></div>
-            <span class="block mt-2 text-xs font-bold text-burgundy uppercase tracking-wider">Azul Marinho</span>
-            <span class="text-[10px] text-gray-400 font-mono">#1B365D</span>
-          </div>
-
-          <!-- Mostarda -->
-          <div onclick="copyColor('#E2A036', 'Mostarda')" class="group cursor-pointer p-3 rounded-xl hover:bg-weddingBg transition-all transform hover:-translate-y-1">
-            <div class="w-14 h-14 sm:w-16 sm:h-16 mx-auto rounded-full bg-mustard shadow-md border-2 border-white ring-2 ring-mustard/30 group-hover:scale-105 transition-transform"></div>
-            <span class="block mt-2 text-xs font-bold text-burgundy uppercase tracking-wider">Mostarda</span>
-            <span class="text-[10px] text-gray-400 font-mono">#E2A036</span>
-          </div>
-
-          <!-- Verde Oliva -->
-          <div onclick="copyColor('#556B2F', 'Verde Oliva')" class="group cursor-pointer p-3 rounded-xl hover:bg-weddingBg transition-all transform hover:-translate-y-1">
-            <div class="w-14 h-14 sm:w-16 sm:h-16 mx-auto rounded-full bg-olive shadow-md border-2 border-white ring-2 ring-olive/30 group-hover:scale-105 transition-transform"></div>
-            <span class="block mt-2 text-xs font-bold text-burgundy uppercase tracking-wider">Verde Oliva</span>
-            <span class="text-[10px] text-gray-400 font-mono">#556B2F</span>
-          </div>
-
-          <!-- Rosa Queimado -->
-          <div onclick="copyColor('#C27D7F', 'Rosa Queimado')" class="group cursor-pointer p-3 rounded-xl hover:bg-weddingBg transition-all transform hover:-translate-y-1">
-            <div class="w-14 h-14 sm:w-16 sm:h-16 mx-auto rounded-full bg-rose shadow-md border-2 border-white ring-2 ring-rose/30 group-hover:scale-105 transition-transform"></div>
-            <span class="block mt-2 text-xs font-bold text-burgundy uppercase tracking-wider">Rosa Queimado</span>
-            <span class="text-[10px] text-gray-400 font-mono">#C27D7F</span>
-          </div>
-
-          <!-- Chocolate -->
-          <div onclick="copyColor('#5B3A29', 'Chocolate')" class="group cursor-pointer p-3 rounded-xl hover:bg-weddingBg transition-all transform hover:-translate-y-1">
-            <div class="w-14 h-14 sm:w-16 sm:h-16 mx-auto rounded-full bg-chocolate shadow-md border-2 border-white ring-2 ring-chocolate/30 group-hover:scale-105 transition-transform"></div>
-            <span class="block mt-2 text-xs font-bold text-burgundy uppercase tracking-wider">Chocolate</span>
-            <span class="text-[10px] text-gray-400 font-mono">#5B3A29</span>
-          </div>
-
-          <!-- Laranja Queimado -->
-          <div onclick="copyColor('#D95D24', 'Laranja Queimado')" class="group cursor-pointer p-3 rounded-xl hover:bg-weddingBg transition-all transform hover:-translate-y-1">
-            <div class="w-14 h-14 sm:w-16 sm:h-16 mx-auto rounded-full bg-burntOrange shadow-md border-2 border-white ring-2 ring-burntOrange/30 group-hover:scale-105 transition-transform"></div>
-            <span class="block mt-2 text-xs font-bold text-burgundy uppercase tracking-wider">Laranja Queimado</span>
-            <span class="text-[10px] text-gray-400 font-mono">#D95D24</span>
-          </div>
-        </div>
-
-        <div class="flex items-center justify-center my-6">
-          <div class="h-px bg-burgundy/20 w-12 sm:w-24"></div>
-          <h3 class="font-serif text-lg sm:text-xl text-burgundy font-semibold px-4 tracking-wider uppercase">
-            Modelos Sugeridos
-          </h3>
-          <div class="h-px bg-burgundy/20 w-12 sm:w-24"></div>
-        </div>
-
-        <!-- Dress Illustrations Grid -->
-        <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-7 gap-4 mb-10 text-center">
-          
-          <!-- Dress 1: Terracota -->
-          <div class="bg-weddingBg/60 p-3 rounded-xl border border-gold/20 flex flex-col items-center">
-            <div class="h-44 flex items-center justify-center my-2">
-              <svg class="h-40 w-auto" viewBox="0 0 100 200" fill="none">
-                <!-- Single strap dress silhouette in Terracota -->
-                <path d="M 42 30 C 45 40 45 50 40 60 C 35 80 25 120 15 180 Q 50 190 85 180 C 75 120 65 80 60 60 C 55 50 55 40 58 30 Z" fill="#C15C3D" opacity="0.9"/>
-                <path d="M 42 30 Q 50 20 52 10 Q 55 20 58 30 Z" fill="#C15C3D"/>
-                <path d="M 40 60 Q 50 65 60 60" stroke="#8A3E26" stroke-width="2"/>
-                <!-- Head contour -->
-                <circle cx="50" cy="18" r="8" fill="#3D261D"/>
-              </svg>
-            </div>
-            <span class="text-[11px] font-bold text-burgundy uppercase">Terracota</span>
-            <div class="flex space-x-1 mt-1">
-              <span class="w-2.5 h-2.5 rounded-full bg-terracota"></span>
-              <span class="w-2.5 h-2.5 rounded-full bg-terracota/70"></span>
-              <span class="w-2.5 h-2.5 rounded-full bg-terracota/40"></span>
-            </div>
-          </div>
-
-          <!-- Dress 2: Azul Marinho -->
-          <div class="bg-weddingBg/60 p-3 rounded-xl border border-gold/20 flex flex-col items-center">
-            <div class="h-44 flex items-center justify-center my-2">
-              <svg class="h-40 w-auto" viewBox="0 0 100 200" fill="none">
-                <!-- Halter neck pleated dress in Navy -->
-                <path d="M 45 25 L 50 40 L 55 25 Z" fill="#1B365D"/>
-                <path d="M 40 40 Q 50 45 60 40 C 65 70 75 130 88 180 Q 50 192 12 180 C 25 130 35 70 40 40 Z" fill="#1B365D" opacity="0.95"/>
-                <path d="M 40 60 L 30 180 M 50 60 L 50 185 M 60 60 L 70 180" stroke="#0D1F38" stroke-width="1" opacity="0.4"/>
-                <circle cx="50" cy="18" r="8" fill="#3D261D"/>
-              </svg>
-            </div>
-            <span class="text-[11px] font-bold text-burgundy uppercase">Azul Marinho</span>
-            <div class="flex space-x-1 mt-1">
-              <span class="w-2.5 h-2.5 rounded-full bg-navy"></span>
-              <span class="w-2.5 h-2.5 rounded-full bg-navy/70"></span>
-              <span class="w-2.5 h-2.5 rounded-full bg-navy/40"></span>
-            </div>
-          </div>
-
-          <!-- Dress 3: Mostarda -->
-          <div class="bg-weddingBg/60 p-3 rounded-xl border border-gold/20 flex flex-col items-center">
-            <div class="h-44 flex items-center justify-center my-2">
-              <svg class="h-40 w-auto" viewBox="0 0 100 200" fill="none">
-                <!-- Off shoulder / V-neck in Mustard -->
-                <path d="M 35 35 Q 50 45 65 35 L 60 60 Q 50 62 40 60 Z" fill="#E2A036"/>
-                <path d="M 40 60 C 35 90 20 130 10 180 Q 50 190 90 180 C 80 130 65 90 60 60 Z" fill="#E2A036" opacity="0.9"/>
-                <circle cx="50" cy="18" r="8" fill="#3D261D"/>
-              </svg>
-            </div>
-            <span class="text-[11px] font-bold text-burgundy uppercase">Mostarda</span>
-            <div class="flex space-x-1 mt-1">
-              <span class="w-2.5 h-2.5 rounded-full bg-mustard"></span>
-              <span class="w-2.5 h-2.5 rounded-full bg-mustard/70"></span>
-              <span class="w-2.5 h-2.5 rounded-full bg-mustard/40"></span>
-            </div>
-          </div>
-
-          <!-- Dress 4: Verde Oliva -->
-          <div class="bg-weddingBg/60 p-3 rounded-xl border border-gold/20 flex flex-col items-center">
-            <div class="h-44 flex items-center justify-center my-2">
-              <svg class="h-40 w-auto" viewBox="0 0 100 200" fill="none">
-                <!-- One shoulder drape in Olive -->
-                <path d="M 38 30 L 60 45 L 58 60 L 40 60 Z" fill="#556B2F"/>
-                <path d="M 40 60 Q 50 63 58 60 C 65 95 78 135 85 180 Q 50 188 15 180 C 22 135 35 95 40 60 Z" fill="#556B2F" opacity="0.9"/>
-                <circle cx="50" cy="18" r="8" fill="#3D261D"/>
-              </svg>
-            </div>
-            <span class="text-[11px] font-bold text-burgundy uppercase">Verde Oliva</span>
-            <div class="flex space-x-1 mt-1">
-              <span class="w-2.5 h-2.5 rounded-full bg-olive"></span>
-              <span class="w-2.5 h-2.5 rounded-full bg-olive/70"></span>
-              <span class="w-2.5 h-2.5 rounded-full bg-olive/40"></span>
-            </div>
-          </div>
-
-          <!-- Dress 5: Rosa Queimado -->
-          <div class="bg-weddingBg/60 p-3 rounded-xl border border-gold/20 flex flex-col items-center">
-            <div class="h-44 flex items-center justify-center my-2">
-              <svg class="h-40 w-auto" viewBox="0 0 100 200" fill="none">
-                <!-- Spaghetti strap draped bust in Rose -->
-                <path d="M 42 28 L 42 35 M 58 28 L 58 35" stroke="#C27D7F" stroke-width="1.5"/>
-                <path d="M 40 35 Q 50 42 60 35 L 58 60 L 42 60 Z" fill="#C27D7F"/>
-                <path d="M 42 60 C 38 90 22 135 12 180 Q 50 190 88 180 C 78 135 62 90 58 60 Z" fill="#C27D7F" opacity="0.95"/>
-                <circle cx="50" cy="18" r="8" fill="#3D261D"/>
-              </svg>
-            </div>
-            <span class="text-[11px] font-bold text-burgundy uppercase">Rosa Queimado</span>
-            <div class="flex space-x-1 mt-1">
-              <span class="w-2.5 h-2.5 rounded-full bg-rose"></span>
-              <span class="w-2.5 h-2.5 rounded-full bg-rose/70"></span>
-              <span class="w-2.5 h-2.5 rounded-full bg-rose/40"></span>
-            </div>
-          </div>
-
-          <!-- Dress 6: Chocolate -->
-          <div class="bg-weddingBg/60 p-3 rounded-xl border border-gold/20 flex flex-col items-center">
-            <div class="h-44 flex items-center justify-center my-2">
-              <svg class="h-40 w-auto" viewBox="0 0 100 200" fill="none">
-                <!-- High neck sleeveless in Chocolate -->
-                <path d="M 45 28 Q 50 30 55 28 L 58 60 L 42 60 Z" fill="#5B3A29"/>
-                <path d="M 42 60 C 38 90 25 130 15 180 Q 50 188 85 180 C 75 130 62 90 58 60 Z" fill="#5B3A29" opacity="0.9"/>
-                <circle cx="50" cy="18" r="8" fill="#3D261D"/>
-              </svg>
-            </div>
-            <span class="text-[11px] font-bold text-burgundy uppercase">Chocolate</span>
-            <div class="flex space-x-1 mt-1">
-              <span class="w-2.5 h-2.5 rounded-full bg-chocolate"></span>
-              <span class="w-2.5 h-2.5 rounded-full bg-chocolate/70"></span>
-              <span class="w-2.5 h-2.5 rounded-full bg-chocolate/40"></span>
-            </div>
-          </div>
-
-          <!-- Dress 7: Laranja Queimado -->
-          <div class="bg-weddingBg/60 p-3 rounded-xl border border-gold/20 flex flex-col items-center">
-            <div class="h-44 flex items-center justify-center my-2">
-              <svg class="h-40 w-auto" viewBox="0 0 100 200" fill="none">
-                <!-- Wrap style dress in Burnt Orange -->
-                <path d="M 40 32 L 60 48 L 56 60 L 40 60 Z" fill="#D95D24"/>
-                <path d="M 40 60 C 35 95 20 135 12 180 Q 50 190 88 180 C 80 135 65 95 56 60 Z" fill="#D95D24" opacity="0.9"/>
-                <circle cx="50" cy="18" r="8" fill="#3D261D"/>
-              </svg>
-            </div>
-            <span class="text-[11px] font-bold text-burgundy uppercase">Laranja Queimado</span>
-            <div class="flex space-x-1 mt-1">
-              <span class="w-2.5 h-2.5 rounded-full bg-burntOrange"></span>
-              <span class="w-2.5 h-2.5 rounded-full bg-burntOrange/70"></span>
-              <span class="w-2.5 h-2.5 rounded-full bg-burntOrange/40"></span>
-            </div>
-          </div>
-
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 pt-4 border-t border-gold/20">
-          
-          <!-- Card 1 -->
-          <div class="bg-weddingBg/40 rounded-xl p-5 border border-gold/30 hover:border-gold transition-all duration-300 hover:shadow-md flex flex-col justify-between text-center relative group">
-            <div class="w-10 h-10 mx-auto mb-3 rounded-full bg-burgundy/10 flex items-center justify-center text-burgundy">
-              <!-- Hanger Icon -->
-              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 4a2 2 0 100 4 2 2 0 000-4zM12 8c-4.418 0-8 2.5-8 5.5V18h16v-4.5C20 10.5 16.418 8 12 8z" />
-              </svg>
-            </div>
-            <h4 class="font-serif font-bold text-burgundy text-base uppercase tracking-wider mb-2">Vestido</h4>
-            <p class="text-xs sm:text-sm text-gray-700 leading-relaxed font-light">
-              Escolha um modelo que te faça sentir bem, confortável e linda. O importante é que seja do seu estilo e da sua forma de ser!
-            </p>
-          </div>
-
-          <!-- Card 2 -->
-          <div class="bg-weddingBg/40 rounded-xl p-5 border border-gold/30 hover:border-gold transition-all duration-300 hover:shadow-md flex flex-col justify-between text-center relative group">
-            <div class="w-10 h-10 mx-auto mb-3 rounded-full bg-burgundy/10 flex items-center justify-center text-burgundy">
-              <!-- Heart Icon -->
-              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
-              </svg>
-            </div>
-            <h4 class="font-serif font-bold text-burgundy text-base uppercase tracking-wider mb-2">O Mais Importante</h4>
-            <p class="text-xs sm:text-sm text-gray-700 leading-relaxed font-light">
-              É que você se sinta bem! No vestido, na cor, no seu jeito. Você é linda do seu jeito, e é exatamente assim que queremos você ao nosso lado!
-            </p>
-          </div>
-
-          <!-- Card 3 -->
-          <div class="bg-weddingBg/40 rounded-xl p-5 border border-gold/30 hover:border-gold transition-all duration-300 hover:shadow-md flex flex-col justify-between text-center relative group">
-            <div class="w-10 h-10 mx-auto mb-3 rounded-full bg-burgundy/10 flex items-center justify-center text-burgundy">
-              <!-- Sparkle Icon -->
-              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/>
-              </svg>
-            </div>
-            <h4 class="font-serif font-bold text-burgundy text-base uppercase tracking-wider mb-2">Você é Especial</h4>
-            <p class="text-xs sm:text-sm text-gray-700 leading-relaxed font-light">
-              Sua presença já torna este momento ainda mais bonito. Escolha a cor e o modelo que te façam brilha, porque o que realmente importa é você, feliz!
-            </p>
-          </div>
-
-          <!-- Card 4 -->
-          <div class="bg-weddingBg/40 rounded-xl p-5 border border-gold/30 hover:border-gold transition-all duration-300 hover:shadow-md flex flex-col justify-between text-center relative group">
-            <div class="w-10 h-10 mx-auto mb-3 rounded-full bg-burgundy/10 flex items-center justify-center text-burgundy">
-              <!-- Gift / Wish Heart Icon -->
-              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
-              </svg>
-            </div>
-            <h4 class="font-serif font-bold text-burgundy text-base uppercase tracking-wider mb-2">Nosso Desejo</h4>
-            <p class="text-xs sm:text-sm text-gray-700 leading-relaxed font-light">
-              Que você se sinta bem, confiante, confortável e livre para ser você. O seu sorriso e a sua alegria são o que mais importam para nós!
-            </p>
-          </div>
-
-        </div>
-      </div>
     </section>
 
-    <section id="section-padrinhos" class="mb-12 transition-all duration-500">
-      <div class="bg-white/90 rounded-2xl p-6 sm:p-10 shadow-lg border border-gold/30 relative overflow-hidden">
-        <div class="absolute top-0 right-0 w-24 h-24 bg-gradient-to-bl from-burgundy/10 to-transparent rounded-bl-full pointer-events-none"></div>
+    <!-- MAIN CONTENT CONTAINER -->
+    <main class="max-w-md mx-auto px-4">
 
-        <div class="text-center mb-8">
-          <span class="text-xs font-bold uppercase tracking-widest text-goldDark">Traje e Orientações</span>
-          <h2 class="font-serif text-3xl sm:text-4xl text-burgundy font-bold mt-1 uppercase tracking-wide">
-            Manual dos Padrinhos
-          </h2>
-          <div class="w-16 h-0.5 bg-gold mx-auto mt-2"></div>
-        </div>
-
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center mb-8">
-          
-          <!-- Left side: Full suit illustration presentation -->
-          <div class="lg:col-span-5 bg-weddingBg/80 p-6 rounded-2xl border border-gold/30 flex flex-col items-center text-center">
-            <span class="text-xs font-bold uppercase tracking-widest text-burgundy mb-2">Traje Completo Sugerido</span>
+        <!-- ==================== MADRINHAS TAB ==================== -->
+        <div id="content-madrinhas" class="tab-transition block">
             
-            <!-- SVG Male Suit Illustration -->
-            <div class="w-full h-64 flex items-center justify-center my-2">
-              <svg class="h-60 w-auto" viewBox="0 0 160 260" fill="none">
-                <!-- Head -->
-                <circle cx="80" cy="25" r="14" fill="#4A3525"/>
-                <!-- White Shirt Collar -->
-                <path d="M 68 45 L 80 62 L 92 45 L 80 50 Z" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1"/>
-                <!-- Marsala Tie -->
-                <path d="M 77 50 L 83 50 L 85 85 L 80 100 L 75 85 Z" fill="#6B1D2F"/>
-                <path d="M 76 50 L 84 50 L 82 58 L 78 58 Z" fill="#5C1D24"/>
-                <!-- Black Jacket/Suit -->
-                <path d="M 45 52 L 68 48 L 75 90 L 40 140 Z" fill="#1A1A1A"/>
-                <path d="M 115 52 L 92 48 L 85 90 L 120 140 Z" fill="#1A1A1A"/>
-                <!-- Lapel highlights -->
-                <path d="M 52 50 L 70 85 L 60 90 Z" fill="#2A2A2A"/>
-                <path d="M 108 50 L 90 85 L 100 90 Z" fill="#2A2A2A"/>
-                <!-- Pants -->
-                <path d="M 55 135 L 78 135 L 75 230 L 52 230 Z" fill="#111111"/>
-                <path d="M 105 135 L 82 135 L 85 230 L 108 230 Z" fill="#111111"/>
-                <!-- Shoes -->
-                <path d="M 48 230 Q 60 228 75 230 L 75 240 Q 55 245 45 238 Z" fill="#0A0A0A"/>
-                <path d="M 112 230 Q 100 228 85 230 L 85 240 Q 105 245 115 238 Z" fill="#0A0A0A"/>
-                <!-- Belt -->
-                <rect x="68" y="132" width="24" height="5" fill="#111" rx="1"/>
-                <rect x="77" y="131" width="6" height="7" fill="#D4AF37"/>
-              </svg>
+            <div class="text-center mb-6">
+                <span class="text-xs uppercase tracking-widest text-earth font-bold block mb-1">Guia de Estilo</span>
+                <h3 class="font-serif text-2xl text-earth-dark font-bold">Paleta de Cores</h3>
+                <p class="text-xs text-gray-500 mt-1">Nossa paleta foi escolhida com carinho para harmonizar o altar.</p>
             </div>
 
-            <p class="text-xs text-gray-600 italic">Elegante, clássico e alinhado para o altar</p>
-          </div>
+            <!-- Color Swatches Grid -->
+            <div class="grid grid-cols-2 gap-3 mb-10">
+                <div class="watercolor-card p-3.5 rounded-2xl swatch-card flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-xl shadow-inner border border-white/50 flex-shrink-0" style="background-color: #B85032;"></div>
+                    <div>
+                        <h4 class="font-serif font-bold text-sm text-gray-800 leading-tight">Terracota</h4>
+                        <span class="text-[10px] text-gray-500 font-mono uppercase">#B85032</span>
+                    </div>
+                </div>
+                <div class="watercolor-card p-3.5 rounded-2xl swatch-card flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-xl shadow-inner border border-white/50 flex-shrink-0" style="background-color: #1F3556;"></div>
+                    <div>
+                        <h4 class="font-serif font-bold text-sm text-gray-800 leading-tight">Azul Marinho</h4>
+                        <span class="text-[10px] text-gray-500 font-mono uppercase">#1F3556</span>
+                    </div>
+                </div>
+                <div class="watercolor-card p-3.5 rounded-2xl swatch-card flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-xl shadow-inner border border-white/50 flex-shrink-0" style="background-color: #DF9B38;"></div>
+                    <div>
+                        <h4 class="font-serif font-bold text-sm text-gray-800 leading-tight">Mostarda</h4>
+                        <span class="text-[10px] text-gray-500 font-mono uppercase">#DF9B38</span>
+                    </div>
+                </div>
+                <div class="watercolor-card p-3.5 rounded-2xl swatch-card flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-xl shadow-inner border border-white/50 flex-shrink-0" style="background-color: #526038;"></div>
+                    <div>
+                        <h4 class="font-serif font-bold text-sm text-gray-800 leading-tight">Verde Oliva</h4>
+                        <span class="text-[10px] text-gray-500 font-mono uppercase">#526038</span>
+                    </div>
+                </div>
+                <div class="watercolor-card p-3.5 rounded-2xl swatch-card flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-xl shadow-inner border border-white/50 flex-shrink-0" style="background-color: #C27274;"></div>
+                    <div>
+                        <h4 class="font-serif font-bold text-sm text-gray-800 leading-tight">Rosa Queimado</h4>
+                        <span class="text-[10px] text-gray-500 font-mono uppercase">#C27274</span>
+                    </div>
+                </div>
+                <div class="watercolor-card p-3.5 rounded-2xl swatch-card flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-xl shadow-inner border border-white/50 flex-shrink-0" style="background-color: #613C29;"></div>
+                    <div>
+                        <h4 class="font-serif font-bold text-sm text-gray-800 leading-tight">Chocolate</h4>
+                        <span class="text-[10px] text-gray-500 font-mono uppercase">#613C29</span>
+                    </div>
+                </div>
+                <div class="watercolor-card p-3.5 rounded-2xl swatch-card flex items-center gap-3 col-span-2 max-w-[220px] mx-auto w-full">
+                    <div class="w-10 h-10 rounded-xl shadow-inner border border-white/50 flex-shrink-0" style="background-color: #D25A24;"></div>
+                    <div>
+                        <h4 class="font-serif font-bold text-sm text-gray-800 leading-tight">Laranja Queimado</h4>
+                        <span class="text-[10px] text-gray-500 font-mono uppercase">#D25A24</span>
+                    </div>
+                </div>
+            </div>
 
-          <!-- Right side: Swatches and Look Details -->
-          <div class="lg:col-span-7 space-y-6">
+            <!-- Carousel de Croquis Vetoriais das 7 Cores -->
+            <div class="mb-10">
+                <div class="flex justify-between items-end mb-4">
+                    <div>
+                        <span class="text-xs uppercase tracking-widest text-earth font-bold block">Inspirações</span>
+                        <h3 class="font-serif text-2xl text-earth-dark font-bold">Modelos Sugeridos</h3>
+                    </div>
+                    <span class="text-xs text-earth-light italic">Arraste para o lado &rarr;</span>
+                </div>
+
+                <div class="flex gap-4 overflow-x-auto no-scrollbar pb-4 -mx-4 px-4 snap-x snap-mandatory">
+                    
+                    <!-- Croqui 1: Terracota -->
+                    <div class="snap-center flex-shrink-0 w-56 watercolor-card rounded-2xl overflow-hidden shadow-md border border-earth-light/20">
+                        <div class="h-72 bg-gradient-to-b from-amber-50/50 to-orange-50/30 flex items-center justify-center p-4 relative">
+                            <svg class="w-full h-full drop-shadow-md" viewBox="0 0 100 200" fill="none">
+                                <path d="M42 35 C45 35 55 35 58 35 L56 50 C56 55 44 55 44 50 Z" fill="#B85032" opacity="0.9"/>
+                                <path d="M45 50 C48 65 52 65 55 50 C62 75 68 110 75 180 C55 185 45 185 25 180 C32 110 38 75 45 50 Z" fill="#B85032"/>
+                                <path d="M47 50 Q50 110 30 180 M53 50 Q50 110 70 180" stroke="rgba(255,255,255,0.25)" stroke-width="1.5"/>
+                                <path d="M48 20 C48 15 52 15 52 20 L50 35 Z" stroke="#8B5E3C" stroke-width="1" stroke-dasharray="2 2"/>
+                            </svg>
+                            <span class="absolute bottom-3 left-3 bg-white/80 backdrop-blur-md text-earth-dark text-[11px] px-3 py-1 rounded-full font-serif font-semibold border border-earth-light/20">Terracota</span>
+                        </div>
+                        <div class="p-3 text-center">
+                            <p class="text-xs text-gray-600 italic">Fluidez & Elegância</p>
+                        </div>
+                    </div>
+
+                    <!-- Croqui 2: Azul Marinho -->
+                    <div class="snap-center flex-shrink-0 w-56 watercolor-card rounded-2xl overflow-hidden shadow-md border border-earth-light/20">
+                        <div class="h-72 bg-gradient-to-b from-slate-50/50 to-blue-50/30 flex items-center justify-center p-4 relative">
+                            <svg class="w-full h-full drop-shadow-md" viewBox="0 0 100 200" fill="none">
+                                <path d="M44 32 Q50 40 56 32 L58 50 Q50 54 42 50 Z" fill="#1F3556" opacity="0.9"/>
+                                <path d="M42 50 C48 65 52 65 58 50 C66 80 72 120 78 180 C58 184 42 184 22 180 C28 120 34 80 42 50 Z" fill="#1F3556"/>
+                                <path d="M50 52 Q45 110 25 180 M50 52 Q55 110 75 180" stroke="rgba(255,255,255,0.2)" stroke-width="1.5"/>
+                                <path d="M47 18 C47 12 53 12 53 18 L50 32 Z" stroke="#8B5E3C" stroke-width="1" stroke-dasharray="2 2"/>
+                            </svg>
+                            <span class="absolute bottom-3 left-3 bg-white/80 backdrop-blur-md text-earth-dark text-[11px] px-3 py-1 rounded-full font-serif font-semibold border border-earth-light/20">Azul Marinho</span>
+                        </div>
+                        <div class="p-3 text-center">
+                            <p class="text-xs text-gray-600 italic">Clássico & Atemporal</p>
+                        </div>
+                    </div>
+
+                    <!-- Croqui 3: Mostarda -->
+                    <div class="snap-center flex-shrink-0 w-56 watercolor-card rounded-2xl overflow-hidden shadow-md border border-earth-light/20">
+                        <div class="h-72 bg-gradient-to-b from-amber-50/50 to-yellow-50/30 flex items-center justify-center p-4 relative">
+                            <svg class="w-full h-full drop-shadow-md" viewBox="0 0 100 200" fill="none">
+                                <path d="M43 34 L57 34 L55 50 L45 50 Z" fill="#DF9B38" opacity="0.9"/>
+                                <path d="M45 50 C48 65 52 65 55 50 C64 78 70 115 76 180 C56 185 44 185 24 180 C30 115 36 78 45 50 Z" fill="#DF9B38"/>
+                                <path d="M48 50 Q42 110 28 180 M52 50 Q58 110 72 180" stroke="rgba(255,255,255,0.3)" stroke-width="1.5"/>
+                                <path d="M48 20 L50 34 M52 20 L50 34" stroke="#8B5E3C" stroke-width="1" stroke-dasharray="2 2"/>
+                            </svg>
+                            <span class="absolute bottom-3 left-3 bg-white/80 backdrop-blur-md text-earth-dark text-[11px] px-3 py-1 rounded-full font-serif font-semibold border border-earth-light/20">Mostarda</span>
+                        </div>
+                        <div class="p-3 text-center">
+                            <p class="text-xs text-gray-600 italic">Vibrante & Sofisticado</p>
+                        </div>
+                    </div>
+
+                    <!-- Croqui 4: Verde Oliva -->
+                    <div class="snap-center flex-shrink-0 w-56 watercolor-card rounded-2xl overflow-hidden shadow-md border border-earth-light/20">
+                        <div class="h-72 bg-gradient-to-b from-stone-50/50 to-emerald-50/30 flex items-center justify-center p-4 relative">
+                            <svg class="w-full h-full drop-shadow-md" viewBox="0 0 100 200" fill="none">
+                                <path d="M42 33 C48 30 54 38 58 35 L55 50 L45 50 Z" fill="#526038" opacity="0.9"/>
+                                <path d="M45 50 C48 65 52 65 55 50 C63 76 69 112 75 180 C55 183 45 183 25 180 C31 112 37 76 45 50 Z" fill="#526038"/>
+                                <path d="M46 50 Q40 105 29 180 M54 50 Q60 105 71 180" stroke="rgba(255,255,255,0.25)" stroke-width="1.5"/>
+                                <path d="M48 18 C48 14 52 14 52 18 L50 33 Z" stroke="#8B5E3C" stroke-width="1" stroke-dasharray="2 2"/>
+                            </svg>
+                            <span class="absolute bottom-3 left-3 bg-white/80 backdrop-blur-md text-earth-dark text-[11px] px-3 py-1 rounded-full font-serif font-semibold border border-earth-light/20">Verde Oliva</span>
+                        </div>
+                        <div class="p-3 text-center">
+                            <p class="text-xs text-gray-600 italic">Natural & Harmonioso</p>
+                        </div>
+                    </div>
+
+                    <!-- Croqui 5: Rosa Queimado -->
+                    <div class="snap-center flex-shrink-0 w-56 watercolor-card rounded-2xl overflow-hidden shadow-md border border-earth-light/20">
+                        <div class="h-72 bg-gradient-to-b from-rose-50/50 to-pink-50/30 flex items-center justify-center p-4 relative">
+                            <svg class="w-full h-full drop-shadow-md" viewBox="0 0 100 200" fill="none">
+                                <path d="M43 35 L57 35 L56 50 L44 50 Z" fill="#C27274" opacity="0.9"/>
+                                <path d="M44 50 C48 65 52 65 56 50 C65 79 71 116 77 180 C57 184 43 184 23 180 C29 116 35 79 44 50 Z" fill="#C27274"/>
+                                <path d="M47 50 Q41 108 27 180 M53 50 Q59 108 73 180" stroke="rgba(255,255,255,0.3)" stroke-width="1.5"/>
+                                <path d="M48 20 C48 15 52 15 52 20 L50 35 Z" stroke="#8B5E3C" stroke-width="1" stroke-dasharray="2 2"/>
+                            </svg>
+                            <span class="absolute bottom-3 left-3 bg-white/80 backdrop-blur-md text-earth-dark text-[11px] px-3 py-1 rounded-full font-serif font-semibold border border-earth-light/20">Rosa Queimado</span>
+                        </div>
+                        <div class="p-3 text-center">
+                            <p class="text-xs text-gray-600 italic">Romântico & Delicado</p>
+                        </div>
+                    </div>
+
+                    <!-- Croqui 6: Chocolate -->
+                    <div class="snap-center flex-shrink-0 w-56 watercolor-card rounded-2xl overflow-hidden shadow-md border border-earth-light/20">
+                        <div class="h-72 bg-gradient-to-b from-stone-100/60 to-amber-900/10 flex items-center justify-center p-4 relative">
+                            <svg class="w-full h-full drop-shadow-md" viewBox="0 0 100 200" fill="none">
+                                <path d="M42 34 Q50 38 58 34 L55 50 L45 50 Z" fill="#613C29" opacity="0.92"/>
+                                <path d="M45 50 C48 65 52 65 55 50 C63 77 69 114 75 180 C55 183 45 183 25 180 C31 114 37 77 45 50 Z" fill="#613C29"/>
+                                <path d="M47 50 Q42 108 28 180 M53 50 Q58 108 72 180" stroke="rgba(255,255,255,0.2)" stroke-width="1.5"/>
+                                <path d="M48 19 L50 34 M52 19 L50 34" stroke="#8B5E3C" stroke-width="1" stroke-dasharray="2 2"/>
+                            </svg>
+                            <span class="absolute bottom-3 left-3 bg-white/80 backdrop-blur-md text-earth-dark text-[11px] px-3 py-1 rounded-full font-serif font-semibold border border-earth-light/20">Chocolate</span>
+                        </div>
+                        <div class="p-3 text-center">
+                            <p class="text-xs text-gray-600 italic">Marcante & Quente</p>
+                        </div>
+                    </div>
+
+                    <!-- Croqui 7: Laranja Queimado -->
+                    <div class="snap-center flex-shrink-0 w-56 watercolor-card rounded-2xl overflow-hidden shadow-md border border-earth-light/20">
+                        <div class="h-72 bg-gradient-to-b from-orange-50/60 to-amber-100/40 flex items-center justify-center p-4 relative">
+                            <svg class="w-full h-full drop-shadow-md" viewBox="0 0 100 200" fill="none">
+                                <path d="M43 33 C47 36 53 36 57 33 L55 50 L45 50 Z" fill="#D25A24" opacity="0.9"/>
+                                <path d="M45 50 C48 65 52 65 55 50 C64 78 70 115 76 180 C56 184 44 184 24 180 C30 115 36 78 45 50 Z" fill="#D25A24"/>
+                                <path d="M48 50 Q41 108 27 180 M52 50 Q59 108 73 180" stroke="rgba(255,255,255,0.3)" stroke-width="1.5"/>
+                                <path d="M48 18 C48 14 52 14 52 18 L50 33 Z" stroke="#8B5E3C" stroke-width="1" stroke-dasharray="2 2"/>
+                            </svg>
+                            <span class="absolute bottom-3 left-3 bg-white/80 backdrop-blur-md text-earth-dark text-[11px] px-3 py-1 rounded-full font-serif font-semibold border border-earth-light/20">Laranja Queimado</span>
+                        </div>
+                        <div class="p-3 text-center">
+                            <p class="text-xs text-gray-600 italic">Aconchegante & Moderno</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Welcoming Cards / Messages -->
+            <div class="space-y-4 mb-10">
+                <div class="watercolor-card p-5 rounded-2xl border-l-4 border-earth">
+                    <div class="flex items-center gap-2 mb-2">
+                        <i class="fa-solid fa-shirt text-earth text-sm"></i>
+                        <h4 class="font-serif font-bold text-earth-dark uppercase text-xs tracking-wider">Vestido</h4>
+                    </div>
+                    <p class="text-sm text-gray-700 leading-relaxed">
+                        Escolha um modelo que te faça sentir bem, confortável e linda. O importante é que seja do seu estilo e da sua forma de ser!
+                    </p>
+                </div>
+
+                <div class="watercolor-card p-5 rounded-2xl border-l-4 border-madrinha-rosaqueimado">
+                    <div class="flex items-center gap-2 mb-2">
+                        <i class="fa-solid fa-heart text-madrinha-rosaqueimado text-sm"></i>
+                        <h4 class="font-serif font-bold text-earth-dark uppercase text-xs tracking-wider">O Mais Importante</h4>
+                    </div>
+                    <p class="text-sm text-gray-700 leading-relaxed">
+                        É que você se sinta bem! No vestido, na cor, no seu jeito. Você é linda do seu jeito, e é exatamente assim que queremos você ao nosso lado!
+                    </p>
+                </div>
+
+                <div class="watercolor-card p-5 rounded-2xl border-l-4 border-madrinha-mostarda">
+                    <div class="flex items-center gap-2 mb-2">
+                        <i class="fa-solid fa-sparkles text-madrinha-mostarda text-sm"></i>
+                        <h4 class="font-serif font-bold text-earth-dark uppercase text-xs tracking-wider">Você é Especial</h4>
+                    </div>
+                    <p class="text-sm text-gray-700 leading-relaxed">
+                        Sua presença já torna este momento ainda mais bonito. Escolha a cor e o modelo que te façam brilhar, porque o que realmente importa é você, feliz!
+                    </p>
+                </div>
+
+                <div class="watercolor-card p-5 rounded-2xl border-l-4 border-madrinha-oliva">
+                    <div class="flex items-center gap-2 mb-2">
+                        <i class="fa-solid fa-hand-holding-heart text-madrinha-oliva text-sm"></i>
+                        <h4 class="font-serif font-bold text-earth-dark uppercase text-xs tracking-wider">Este é o Nosso Desejo</h4>
+                    </div>
+                    <p class="text-sm text-gray-700 leading-relaxed">
+                        Que você se sinta bem, confiante, confortável e livre para ser você. O seu sorriso e a sua alegria são o que mais importam para nós!
+                    </p>
+                </div>
+            </div>
+
+            <!-- Closing Note -->
+            <div class="text-center p-6 watercolor-card rounded-3xl mb-6 relative overflow-hidden">
+                <div class="absolute -right-4 -bottom-4 opacity-10 text-earth">
+                    <i class="fa-solid fa-heart text-8xl"></i>
+                </div>
+                <p class="font-serif italic text-lg text-earth-dark mb-2">
+                    "Estamos muito felizes por ter você ao nosso lado!"
+                </p>
+                <p class="font-script text-2xl text-earth">Bianca & Felipe</p>
+            </div>
+
+        </div>
+
+
+        <!-- ==================== PADRINHOS TAB ==================== -->
+        <div id="content-padrinhos" class="tab-transition hidden">
             
-            <!-- Paleta de Cores Padrinhos -->
-            <div>
-              <div class="flex items-center mb-4">
-                <h3 class="font-serif text-lg font-semibold text-burgundy uppercase tracking-wider">
-                  Paleta de Cores & Itens
-                </h3>
-                <div class="flex-1 h-px bg-burgundy/20 ml-3"></div>
-              </div>
-
-              <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 text-center">
-                <!-- Camisa Branca -->
-                <div onclick="copyColor('#FFFFFF', 'Camisa Branca')" class="cursor-pointer bg-weddingBg/50 p-3 rounded-xl border border-gold/20 hover:border-gold transition-all">
-                  <div class="w-12 h-12 mx-auto rounded-full bg-white border-2 border-gray-300 shadow-sm flex items-center justify-center">
-                    <span class="text-xs font-bold text-gray-400">BR</span>
-                  </div>
-                  <span class="block mt-2 text-[11px] font-bold text-burgundy uppercase">Camisa Branca</span>
-                </div>
-
-                <!-- Terno Preto -->
-                <div onclick="copyColor('#1A1A1A', 'Terno Preto')" class="cursor-pointer bg-weddingBg/50 p-3 rounded-xl border border-gold/20 hover:border-gold transition-all">
-                  <div class="w-12 h-12 mx-auto rounded-full bg-black shadow-sm border-2 border-white ring-1 ring-gray-400 flex items-center justify-center">
-                    <span class="text-xs font-bold text-white">PR</span>
-                  </div>
-                  <span class="block mt-2 text-[11px] font-bold text-burgundy uppercase">Terno Preto</span>
-                </div>
-
-                <!-- Gravata Marsala -->
-                <div onclick="copyColor('#6B1D2F', 'Gravata Marsala')" class="cursor-pointer bg-weddingBg/50 p-3 rounded-xl border border-gold/20 hover:border-gold transition-all">
-                  <div class="w-12 h-12 mx-auto rounded-full bg-marsala shadow-sm border-2 border-white ring-1 ring-marsala/40 flex items-center justify-center">
-                    <span class="text-xs font-bold text-white">MA</span>
-                  </div>
-                  <span class="block mt-2 text-[11px] font-bold text-burgundy uppercase">Gravata Marsala</span>
-                </div>
-
-                <!-- Sapato Preto -->
-                <div onclick="copyColor('#111111', 'Sapato Preto')" class="cursor-pointer bg-weddingBg/50 p-3 rounded-xl border border-gold/20 hover:border-gold transition-all">
-                  <div class="w-12 h-12 mx-auto rounded-full bg-gray-900 shadow-sm border-2 border-white ring-1 ring-gray-400 flex items-center justify-center">
-                    <span class="text-xs font-bold text-white">SP</span>
-                  </div>
-                  <span class="block mt-2 text-[11px] font-bold text-burgundy uppercase">Sapato Preto</span>
-                </div>
-              </div>
+            <div class="text-center mb-6">
+                <span class="text-xs uppercase tracking-widest text-earth font-bold block mb-1">Guia de Traje</span>
+                <h3 class="font-serif text-2xl text-earth-dark font-bold">Paleta de Cores & Look</h3>
+                <p class="text-xs text-gray-500 mt-1">Os detalhes pensados para um visual elegante e alinhado.</p>
             </div>
 
-            <!-- Detalhes do Look -->
-            <div>
-              <div class="flex items-center mb-4">
-                <h3 class="font-serif text-lg font-semibold text-burgundy uppercase tracking-wider">
-                  Detalhes do Look
-                </h3>
-                <div class="flex-1 h-px bg-burgundy/20 ml-3"></div>
-              </div>
+            <!-- Palette Grid -->
+            <div class="grid grid-cols-2 gap-3 mb-10">
+                <div class="watercolor-card p-3.5 rounded-2xl swatch-card flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-xl shadow-inner border border-gray-300 flex-shrink-0" style="background-color: #FFFFFF;"></div>
+                    <div>
+                        <h4 class="font-serif font-bold text-sm text-gray-800 leading-tight">Camisa Branca</h4>
+                        <span class="text-[10px] text-gray-500 font-sans">Clássica</span>
+                    </div>
+                </div>
+                <div class="watercolor-card p-3.5 rounded-2xl swatch-card flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-xl shadow-inner border border-white/50 flex-shrink-0" style="background-color: #1A1A1A;"></div>
+                    <div>
+                        <h4 class="font-serif font-bold text-sm text-gray-800 leading-tight">Terno Preto</h4>
+                        <span class="text-[10px] text-gray-500 font-sans">Alinhado</span>
+                    </div>
+                </div>
+                <div class="watercolor-card p-3.5 rounded-2xl swatch-card flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-xl shadow-inner border border-white/50 flex-shrink-0" style="background-color: #6B2D38;"></div>
+                    <div>
+                        <h4 class="font-serif font-bold text-sm text-gray-800 leading-tight">Gravata Marsala</h4>
+                        <span class="text-[10px] text-gray-500 font-sans">Destaque</span>
+                    </div>
+                </div>
+                <div class="watercolor-card p-3.5 rounded-2xl swatch-card flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-xl shadow-inner border border-white/50 flex-shrink-0" style="background-color: #222222;"></div>
+                    <div>
+                        <h4 class="font-serif font-bold text-sm text-gray-800 leading-tight">Sapato Preto</h4>
+                        <span class="text-[10px] text-gray-500 font-sans">Social</span>
+                    </div>
+                </div>
+            </div>
 
-              <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
-                
-                <!-- Detail 1 -->
-                <div class="p-3 bg-white rounded-xl border border-gold/30 text-center shadow-sm">
-                  <div class="w-10 h-10 mx-auto mb-1 rounded-full bg-marsala/10 flex items-center justify-center text-marsala">
-                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M6 2l6 12 6-12H6zm6 14l-4 6h8l-4-6z"/>
-                    </svg>
-                  </div>
-                  <span class="text-[10px] uppercase font-bold text-burgundy">Gravata Marsala</span>
+            <!-- Detalhes do Traje (Ilustrações Vetoriais Minimalistas) -->
+            <div class="mb-10">
+                <div class="mb-4">
+                    <span class="text-xs uppercase tracking-widest text-earth font-bold block">Composição</span>
+                    <h3 class="font-serif text-2xl text-earth-dark font-bold">Detalhes do Look</h3>
                 </div>
 
-                <!-- Detail 2 -->
-                <div class="p-3 bg-white rounded-xl border border-gold/30 text-center shadow-sm">
-                  <div class="w-10 h-10 mx-auto mb-1 rounded-full bg-burgundy/10 flex items-center justify-center text-burgundy">
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <rect x="4" y="4" width="16" height="16" rx="2" stroke-width="1.5"/>
-                      <path d="M12 4v16" stroke-width="1.5"/>
-                    </svg>
-                  </div>
-                  <span class="text-[10px] uppercase font-bold text-burgundy">Terno Preto</span>
+                <div class="grid grid-cols-2 gap-3">
+                    <!-- Gravata Marsala -->
+                    <div class="watercolor-card rounded-2xl overflow-hidden shadow-sm border border-earth-light/20 p-4 text-center">
+                        <div class="h-28 flex items-center justify-center bg-stone-50/50 rounded-xl mb-2">
+                            <svg class="w-16 h-20 drop-shadow-sm" viewBox="0 0 60 80" fill="none">
+                                <path d="M25 10 L35 10 L33 22 L27 22 Z" fill="#6B2D38"/>
+                                <path d="M27 22 L33 22 L38 65 L30 75 L22 65 Z" fill="#6B2D38"/>
+                                <path d="M30 22 L30 75" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+                            </svg>
+                        </div>
+                        <h5 class="font-serif font-bold text-xs text-gray-800">Gravata Marsala</h5>
+                        <p class="text-[10px] text-earth italic">Acessório fornecido/indicado</p>
+                    </div>
+
+                    <!-- Terno Preto -->
+                    <div class="watercolor-card rounded-2xl overflow-hidden shadow-sm border border-earth-light/20 p-4 text-center">
+                        <div class="h-28 flex items-center justify-center bg-stone-50/50 rounded-xl mb-2">
+                            <svg class="w-20 h-20 drop-shadow-sm" viewBox="0 0 80 80" fill="none">
+                                <path d="M15 15 L32 20 L30 70 L10 65 Z" fill="#1A1A1A"/>
+                                <path d="M65 15 L48 20 L50 70 L70 65 Z" fill="#1A1A1A"/>
+                                <path d="M32 20 L48 20 L40 55 Z" fill="#FFFFFF"/>
+                                <path d="M38 20 L42 20 L41 45 L40 48 L39 45 Z" fill="#6B2D38"/>
+                            </svg>
+                        </div>
+                        <h5 class="font-serif font-bold text-xs text-gray-800">Terno Preto</h5>
+                        <p class="text-[10px] text-earth italic">Corte Tradicional ou Slim</p>
+                    </div>
+
+                    <!-- Camisa Branca -->
+                    <div class="watercolor-card rounded-2xl overflow-hidden shadow-sm border border-earth-light/20 p-4 text-center">
+                        <div class="h-28 flex items-center justify-center bg-stone-50/50 rounded-xl mb-2">
+                            <svg class="w-20 h-20 drop-shadow-sm" viewBox="0 0 80 80" fill="none">
+                                <path d="M20 20 L32 15 L40 22 L48 15 L60 20 L58 70 L22 70 Z" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1"/>
+                                <path d="M32 15 L40 25 L48 15" stroke="#D1D5DB" stroke-width="1.5"/>
+                                <circle cx="40" cy="35" r="1.5" fill="#9CA3AF"/>
+                                <circle cx="40" cy="48" r="1.5" fill="#9CA3AF"/>
+                                <circle cx="40" cy="61" r="1.5" fill="#9CA3AF"/>
+                            </svg>
+                        </div>
+                        <h5 class="font-serif font-bold text-xs text-gray-800">Camisa Branca</h5>
+                        <p class="text-[10px] text-earth italic">Manga longa social</p>
+                    </div>
+
+                    <!-- Sapato Preto -->
+                    <div class="watercolor-card rounded-2xl overflow-hidden shadow-sm border border-earth-light/20 p-4 text-center">
+                        <div class="h-28 flex items-center justify-center bg-stone-50/50 rounded-xl mb-2">
+                            <svg class="w-20 h-16 drop-shadow-sm" viewBox="0 0 80 60" fill="none">
+                                <path d="M10 38 C15 35 30 30 50 32 C65 33 72 40 70 46 C68 49 10 50 10 38 Z" fill="#222222"/>
+                                <path d="M12 46 L68 46 L66 50 L10 50 Z" fill="#111111"/>
+                                <path d="M32 32 C35 28 42 28 45 32" stroke="#444444" stroke-width="1"/>
+                            </svg>
+                        </div>
+                        <h5 class="font-serif font-bold text-xs text-gray-800">Sapato Preto</h5>
+                        <p class="text-[10px] text-earth italic">Modelo social limpo</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Welcoming Cards / Instructions -->
+            <div class="space-y-4 mb-10">
+                <div class="watercolor-card p-5 rounded-2xl border-l-4 border-padrinho-gravata">
+                    <div class="flex items-center gap-2 mb-2">
+                        <i class="fa-solid fa-user-tie text-padrinho-gravata text-sm"></i>
+                        <h4 class="font-serif font-bold text-earth-dark uppercase text-xs tracking-wider">Orientação do Traje</h4>
+                    </div>
+                    <p class="text-sm text-gray-700 leading-relaxed">
+                        Camisa branca, terno preto, gravata marsala e sapato preto. É importante manter o traje completo e bem alinhado para que todos estejam em harmonia neste momento tão especial.
+                    </p>
                 </div>
 
-                <!-- Detail 3 -->
-                <div class="p-3 bg-white rounded-xl border border-gold/30 text-center shadow-sm">
-                  <div class="w-10 h-10 mx-auto mb-1 rounded-full bg-burgundy/10 flex items-center justify-center text-burgundy">
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 10h18M7 15h1m4 0h1m4 0h1"/>
-                    </svg>
-                  </div>
-                  <span class="text-[10px] uppercase font-bold text-burgundy">Camisa Branca</span>
+                <div class="watercolor-card p-5 rounded-2xl border-l-4 border-earth">
+                    <div class="flex items-center gap-2 mb-2">
+                        <i class="fa-solid fa-heart text-earth text-sm"></i>
+                        <h4 class="font-serif font-bold text-earth-dark uppercase text-xs tracking-wider">Este é o Nosso Desejo</h4>
+                    </div>
+                    <p class="text-sm text-gray-700 leading-relaxed">
+                        Que vocês se sintam bem, confiantes e, acima de tudo, felizes por fazer parte desse capítulo tão importante das nossas vidas.
+                    </p>
                 </div>
-
-                <!-- Detail 4 -->
-                <div class="p-3 bg-white rounded-xl border border-gold/30 text-center shadow-sm">
-                  <div class="w-10 h-10 mx-auto mb-1 rounded-full bg-burgundy/10 flex items-center justify-center text-burgundy">
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 14c1.49-1.28 2-2.8 2-4.5 0-2.5-2-4.5-4.5-4.5C14.5 5 13 6.5 12 8c-1-1.5-2.5-3-4.5-3C5 5 3 7 3 9.5c0 1.7.51 3.22 2 4.5l7 7 7-7z"/>
-                    </svg>
-                  </div>
-                  <span class="text-[10px] uppercase font-bold text-burgundy">Sapato Preto</span>
-                </div>
-
-              </div>
             </div>
 
-          </div>
-        </div>
-
-        <!-- Guidance Cards Padrinhos -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-4 border-t border-gold/20">
-          
-          <!-- Card 1 -->
-          <div class="bg-weddingBg/40 rounded-xl p-6 border border-gold/30 hover:border-gold transition-all duration-300 hover:shadow-md flex items-start space-x-4">
-            <div class="w-12 h-12 rounded-full bg-burgundy/10 flex-shrink-0 flex items-center justify-center text-burgundy mt-1">
-              <!-- Hanger Icon -->
-              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 4a2 2 0 100 4 2 2 0 000-4zM12 8c-4.418 0-8 2.5-8 5.5V18h16v-4.5C20 10.5 16.418 8 12 8z"/>
-              </svg>
+            <!-- Closing Note -->
+            <div class="text-center p-6 watercolor-card rounded-3xl mb-6 relative overflow-hidden">
+                <p class="font-serif italic text-lg text-earth-dark mb-2">
+                    "Obrigada por caminharem com a gente até aqui."
+                </p>
+                <p class="font-script text-2xl text-earth">Bianca & Felipe</p>
             </div>
-            <div>
-              <h4 class="font-serif font-bold text-burgundy text-lg uppercase tracking-wider mb-2">Traje dos Padrinhos</h4>
-              <p class="text-xs sm:text-sm text-gray-700 leading-relaxed font-light">
-                Camisa branca, terno preto, gravata marsala e sapato preto. É importante manter o traje completo e bem alinhado para que todos estejam em harmonia neste momento tão especial.
-              </p>
-            </div>
-          </div>
-
-          <!-- Card 2 -->
-          <div class="bg-weddingBg/40 rounded-xl p-6 border border-gold/30 hover:border-gold transition-all duration-300 hover:shadow-md flex items-start space-x-4">
-            <div class="w-12 h-12 rounded-full bg-burgundy/10 flex-shrink-0 flex items-center justify-center text-burgundy mt-1">
-              <!-- Heart Icon -->
-              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
-              </svg>
-            </div>
-            <div>
-              <h4 class="font-serif font-bold text-burgundy text-lg uppercase tracking-wider mb-2">Este é o Nosso Desejo</h4>
-              <p class="text-xs sm:text-sm text-gray-700 leading-relaxed font-light mb-2">
-                Que vocês se sintam bem, confiantes e, acima de tudo, felizes por fazer parte desse capítulo tão importante das nossas vidas.
-              </p>
-              <p class="font-script text-xl text-burgundyLight">
-                Obrigado por caminharem com a gente até aqui.
-              </p>
-            </div>
-          </div>
 
         </div>
 
-      </div>
-    </section>
+    </main>
 
-    <footer class="text-center py-8 relative">
-      <div class="max-w-md mx-auto">
-        <!-- Heart ornament -->
-        <div class="flex items-center justify-center space-x-3 mb-3 text-burgundy">
-          <div class="h-px bg-gold w-12"></div>
-          <svg class="w-5 h-5 text-burgundy fill-current" viewBox="0 0 24 24">
-            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
-          </svg>
-          <div class="h-px bg-gold w-12"></div>
+    <!-- Floating Contact Button (WhatsApp Action) -->
+    <div class="fixed bottom-4 left-0 right-0 z-50 px-4 max-w-md mx-auto">
+        <a href="https://wa.me/?text=Ol%C3%A1%20Bianca%20e%20Felipe!%20Amei%20o%20Manual%20dos%20Padrinhos." target="_blank" class="w-full bg-earth-dark hover:bg-earth text-white py-3.5 px-6 rounded-full shadow-2xl font-serif text-sm tracking-wider flex items-center justify-center gap-3 border border-amber-200/30 active:scale-95 transition-all">
+            <i class="fa-brands fa-whatsapp text-lg text-emerald-400"></i>
+            <span>FALAR COM OS NOIVOS</span>
+        </a>
+    </div>
+
+    <!-- Script de Troca de Abas -->
+    <script>
+        function switchTab(tab) {
+            const contentMadrinhas = document.getElementById('content-madrinhas');
+            const contentPadrinhos = document.getElementById('content-padrinhos');
+            const tabMadrinhas = document.getElementById('tab-madrinhas');
+            const tabPadrinhos = document.getElementById('tab-padrinhos');
+
+            if (tab === 'madrinhas') {
+                contentMadrinhas.classList.remove('hidden');
+                contentMadrinhas.classList.add('block');
+                contentPadrinhos.classList.remove('block');
+                contentPadrinhos.classList.add('hidden');
+
+                tabMadrinhas.classList.add('active-tab');
+                tabMadrinhas.classList.remove('text-earth');
+                tabPadrinhos.classList.remove('active-tab');
+                tabPadrinhos.classList.add('text-earth');
+            } else {
+                contentPadrinhos.classList.remove('hidden');
+                contentPadrinhos.classList.add('block');
+                contentMadrinhas.classList.remove('block');
+                contentMadrinhas.classList.add('hidden');
+
+                tabPadrinhos.classList.add('active-tab');
+                tabPadrinhos.classList.remove('text-earth');
+                tabMadrinhas.classList.remove('active-tab');
+                tabMadrinhas.classList.add('text-earth');
+            }
+        }
+    </script>
+
+    <!-- Bottom Decorative Footer -->
+    <footer class="text-center mt-12 mb-8 text-gray-400 text-xs font-serif">
+        <div class="flex justify-center items-center gap-2 mb-2">
+            <div class="w-12 h-px bg-earth-light/30"></div>
+            <span class="text-earth-light text-base">❦</span>
+            <div class="w-12 h-px bg-earth-light/30"></div>
         </div>
-
-        <p class="font-script text-3xl sm:text-4xl text-burgundy mb-2">
-          Estamos muito felizes por ter você ao nosso lado!
-        </p>
-
-        <h2 class="font-serif text-xl sm:text-2xl font-bold tracking-widest text-burgundy uppercase mt-4">
-          Bianca &amp; Felipe
-        </h2>
-        
-        <p class="text-[11px] text-gray-500 uppercase tracking-widest mt-2">Com todo o nosso carinho</p>
-      </div>
+        <p class="italic text-earth-light">Com carinho, Bianca & Felipe</p>
     </footer>
-
-  </div>
-
-  <div id="toast" class="fixed bottom-6 left-1/2 transform -translate-x-1/2 bg-burgundy text-white text-xs sm:text-sm px-6 py-3 rounded-full shadow-2xl border border-gold/40 hidden items-center space-x-2 z-50 pointer-events-none">
-    <svg class="w-4 h-4 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-    </svg>
-    <span id="toast-message">Código copiado com sucesso!</span>
-  </div>
-
-  <script>
-    // Tab Switching Functionality
-    function switchTab(tab) {
-      const secMadrinhas = document.getElementById('section-madrinhas');
-      const secPadrinhos = document.getElementById('section-padrinhos');
-      
-      const btnAll = document.getElementById('btn-all');
-      const btnMadrinhas = document.getElementById('btn-madrinhas');
-      const btnPadrinhos = document.getElementById('btn-padrinhos');
-
-      // Reset button styles
-      [btnAll, btnMadrinhas, btnPadrinhos].forEach(btn => {
-        btn.classList.remove('bg-burgundy', 'text-white', 'shadow');
-        btn.classList.add('text-burgundy', 'hover:bg-burgundy/10');
-      });
-
-      if (tab === 'all') {
-        secMadrinhas.style.display = 'block';
-        secPadrinhos.style.display = 'block';
-        btnAll.classList.add('bg-burgundy', 'text-white', 'shadow');
-        btnAll.classList.remove('text-burgundy', 'hover:bg-burgundy/10');
-      } else if (tab === 'madrinhas') {
-        secMadrinhas.style.display = 'block';
-        secPadrinhos.style.display = 'none';
-        btnMadrinhas.classList.add('bg-burgundy', 'text-white', 'shadow');
-        btnMadrinhas.classList.remove('text-burgundy', 'hover:bg-burgundy/10');
-      } else if (tab === 'padrinhos') {
-        secMadrinhas.style.display = 'none';
-        secPadrinhos.style.display = 'block';
-        btnPadrinhos.classList.add('bg-burgundy', 'text-white', 'shadow');
-        btnPadrinhos.classList.remove('text-burgundy', 'hover:bg-burgundy/10');
-      }
-    }
-
-    // Copy Color Code to Clipboard with Fallback
-    function copyColor(hex, name) {
-      if (navigator.clipboard && navigator.clipboard.writeText) {
-        navigator.clipboard.writeText(hex).then(() => {
-          showToast(`Cor ${name} (${hex}) copiada!`);
-        }).catch(() => {
-          fallbackCopyText(hex, name);
-        });
-      } else {
-        fallbackCopyText(hex, name);
-      }
-    }
-
-    function fallbackCopyText(text, name) {
-      const textArea = document.createElement("textarea");
-      textArea.value = text;
-      textArea.style.position = "fixed";
-      textArea.style.left = "-9999px";
-      document.body.appendChild(textArea);
-      textArea.focus();
-      textArea.select();
-      try {
-        document.execCommand('copy');
-        showToast(`Cor ${name} (${text}) copiada!`);
-      } catch (err) {
-        showToast(`Cor: ${name} (${text})`);
-      }
-      document.body.removeChild(textArea);
-    }
-
-    // Toast popup message helper
-    let toastTimeout;
-    function showToast(msg) {
-      const toast = document.getElementById('toast');
-      const toastMsg = document.getElementById('toast-message');
-      
-      toastMsg.innerText = msg;
-      toast.classList.remove('hidden');
-      toast.classList.add('flex', 'toast-anim');
-
-      clearTimeout(toastTimeout);
-      toastTimeout = setTimeout(() => {
-        toast.classList.remove('flex', 'toast-anim');
-        toast.classList.add('hidden');
-      }, 2500);
-    }
-  </script>
 </body>
 </html>
