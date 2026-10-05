@@ -1,0 +1,542 @@
+eu vou fazer algumas alterações neste código. mas por enquanto não altere nada
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manual dos Padrinhos e Madrinhas | Bianca & Felipe</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Great+Vibes&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cream: '#FDFBF7',
+                        'cream-accent': '#F5EFE6',
+                        earth: '#8B5E3C',
+                        'earth-light': '#A67C52',
+                        'earth-dark': '#5C3D26',
+                        charcoal: '#2C2A29',
+                        madrinha: {
+                            terracota: '#B85032',
+                            marinho: '#1F3556',
+                            mostarda: '#DF9B38',
+                            oliva: '#526038',
+                            rosaqueimado: '#C27274',
+                            chocolate: '#613C29',
+                            laranjaqueimado: '#D25A24'
+                        },
+                        padrinho: {
+                            camisa: '#FFFFFF',
+                            terno: '#1A1A1A',
+                            gravata: '#6B2D38',
+                            sapato: '#222222'
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['"Cormorant Garamond"', 'serif'],
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        script: ['"Great Vibes"', 'cursive']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #FDFBF7;
+            color: #2C2A29;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            overflow-x: hidden;
+        }
+
+        .watercolor-card {
+            position: relative;
+            background: linear-gradient(135deg, rgba(255,255,255,0.92) 0%, rgba(253,251,247,0.8) 100%);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(166, 124, 82, 0.18);
+            box-shadow: 0 10px 25px -5px rgba(139, 94, 60, 0.08), 0 8px 10px -6px rgba(139, 94, 60, 0.04);
+        }
+
+        .swatch-card {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            background-image: radial-gradient(circle at 50% 0%, rgba(255, 255, 255, 0.3), transparent 70%);
+        }
+
+        .swatch-card:hover, .swatch-card:active {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 20px -3px rgba(0, 0, 0, 0.12);
+        }
+
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        .bg-floral-top {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 800 200'%3E%3Cg fill='%23A67C52' fill-opacity='0.08'%3E%3Cpath d='M100 20c-20 0-40 10-50 30-10-20-30-30-50-30 0 40 30 70 50 100 20-30 50-60 50-100zM750 20c-20 0-40 10-50 30-10-20-30-30-50-30 0 40 30 70 50 100 20-30 50-60 50-100z'/%3E%3Cpath d='M400 10c-30 0-60 15-75 45-15-30-45-45-75-45 0 60 45 105 75 150 30-45 75-90 75-150z'/%3E%3C/g%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: top center;
+            background-size: contain;
+        }
+
+        .active-tab {
+            background-color: #8B5E3C !important;
+            color: #FFFFFF !important;
+            box-shadow: 0 4px 14px rgba(139, 94, 60, 0.35);
+        }
+
+        .tab-transition {
+            transition: all 0.4s ease-in-out;
+        }
+    </style>
+</head>
+<body class="min-h-screen pb-24 text-charcoal bg-floral-top">
+
+    <!-- Header Section -->
+    <header class="pt-8 pb-6 px-4 text-center max-w-md mx-auto relative">
+        <div class="flex justify-center mb-3">
+            <svg class="w-16 h-8 text-earth-light opacity-75" viewBox="0 0 100 50" fill="currentColor">
+                <path d="M50 45 C40 30, 20 25, 5 30 C20 20, 35 20, 50 35 C65 20, 80 20, 95 30 C80 25, 60 30, 50 45 Z"></path>
+                <circle cx="50" cy="12" r="3" fill="#8B5E3C"></circle>
+                <circle cx="42" cy="18" r="2" fill="#A67C52"></circle>
+                <circle cx="58" cy="18" r="2" fill="#A67C52"></circle>
+            </svg>
+        </div>
+
+        <p class="font-serif italic text-earth text-base tracking-wide mb-1">
+            "O amor jamais acabará."
+        </p>
+        <span class="text-xs uppercase tracking-widest text-earth-light font-medium block mb-4">1 Coríntios 13:8</span>
+
+        <h1 class="font-serif text-2xl sm:text-3xl font-bold tracking-wider text-earth-dark uppercase mb-1 leading-snug">
+            Manual dos Padrinhos<br>& Madrinhas
+        </h1>
+
+        <div class="w-24 h-0.5 bg-gradient-to-r from-transparent via-earth-light to-transparent mx-auto my-4"></div>
+
+        <p class="font-serif italic text-lg text-gray-700 px-4 leading-relaxed mb-4">
+            Juntas e juntos neste dia tão especial.<br>
+            <span class="text-xs font-sans not-italic text-gray-600 block mt-2 leading-relaxed">
+                Mais do que um convite ou vestido, é sobre estar presente de forma única e verdadeira.
+            </span>
+        </p>
+
+        <p class="font-script text-4xl text-earth-dark mt-2 tracking-wide">
+            Bianca & Felipe
+        </p>
+    </header>
+
+    <!-- Navigation Tabs -->
+    <section class="max-w-md mx-auto px-3 mb-8 sticky top-3 z-40">
+        <div class="bg-white/95 backdrop-blur-md p-1.5 rounded-full shadow-lg border border-earth-light/20 flex justify-between gap-1">
+            <button id="tab-madrinhas" onclick="switchTab('madrinhas')" class="tab-transition flex-1 py-2.5 px-2 rounded-full font-serif text-xs font-bold tracking-wider flex items-center justify-center gap-1 active-tab">
+                <span>🌸</span> MADRINHAS
+            </button>
+            <button id="tab-padrinhos" onclick="switchTab('padrinhos')" class="tab-transition flex-1 py-2.5 px-2 rounded-full font-serif text-xs font-bold tracking-wider text-earth hover:bg-cream-accent/50 flex items-center justify-center gap-1">
+                <span>👔</span> PADRINHOS
+            </button>
+            <button id="tab-recado" onclick="switchTab('recado')" class="tab-transition flex-1 py-2.5 px-2 rounded-full font-serif text-xs font-bold tracking-wider text-earth hover:bg-cream-accent/50 flex items-center justify-center gap-1">
+                <span>✉️</span> RECADO
+            </button>
+        </div>
+    </section>
+
+    <!-- MAIN CONTENT CONTAINER -->
+    <main class="max-w-md mx-auto px-4">
+
+        <!-- ==================== MADRINHAS TAB ==================== -->
+        <div id="content-madrinhas" class="tab-transition block">
+            
+            <div class="text-center mb-6">
+                <span class="text-xs uppercase tracking-widest text-earth font-semibold block mb-1">Guia de Estilo</span>
+                <h3 class="font-serif text-2xl text-earth-dark font-bold">Paleta de Cores</h3>
+                <p class="text-xs text-gray-500 mt-1">Nossa paleta foi escolhida com carinho para harmonizar o altar.</p>
+            </div>
+
+            <!-- Color Palette Swatches Grid -->
+            <div class="grid grid-cols-2 gap-3 mb-10">
+                <div class="watercolor-card p-3.5 rounded-2xl swatch-card flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-xl shadow-inner border border-white/50 flex-shrink-0" style="background-color: #B85032;"></div>
+                    <div>
+                        <h4 class="font-serif font-bold text-sm text-gray-800 leading-tight">Terracota</h4>
+                    </div>
+                </div>
+                <div class="watercolor-card p-3.5 rounded-2xl swatch-card flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-xl shadow-inner border border-white/50 flex-shrink-0" style="background-color: #1F3556;"></div>
+                    <div>
+                        <h4 class="font-serif font-bold text-sm text-gray-800 leading-tight">Azul Marinho</h4>
+                    </div>
+                </div>
+                <div class="watercolor-card p-3.5 rounded-2xl swatch-card flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-xl shadow-inner border border-white/50 flex-shrink-0" style="background-color: #DF9B38;"></div>
+                    <div>
+                        <h4 class="font-serif font-bold text-sm text-gray-800 leading-tight">Mostarda</h4>
+                    </div>
+                </div>
+                <div class="watercolor-card p-3.5 rounded-2xl swatch-card flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-xl shadow-inner border border-white/50 flex-shrink-0" style="background-color: #526038;"></div>
+                    <div>
+                        <h4 class="font-serif font-bold text-sm text-gray-800 leading-tight">Verde Oliva</h4>
+                    </div>
+                </div>
+                <div class="watercolor-card p-3.5 rounded-2xl swatch-card flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-xl shadow-inner border border-white/50 flex-shrink-0" style="background-color: #C27274;"></div>
+                    <div>
+                        <h4 class="font-serif font-bold text-sm text-gray-800 leading-tight">Rosa Queimado</h4>
+                    </div>
+                </div>
+                <div class="watercolor-card p-3.5 rounded-2xl swatch-card flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-xl shadow-inner border border-white/50 flex-shrink-0" style="background-color: #613C29;"></div>
+                    <div>
+                        <h4 class="font-serif font-bold text-sm text-gray-800 leading-tight">Chocolate</h4>
+                    </div>
+                </div>
+                <div class="watercolor-card p-3.5 rounded-2xl swatch-card flex items-center gap-3 col-span-2 max-w-[220px] mx-auto w-full">
+                    <div class="w-10 h-10 rounded-xl shadow-inner border border-white/50 flex-shrink-0" style="background-color: #D25A24;"></div>
+                    <div>
+                        <h4 class="font-serif font-bold text-sm text-gray-800 leading-tight">Laranja Queimado</h4>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modelos Sugeridos -->
+            <div class="mb-10">
+                <div class="flex justify-between items-end mb-4">
+                    <div>
+                        <span class="text-xs uppercase tracking-widest text-earth font-semibold block">Inspirações</span>
+                        <h3 class="font-serif text-2xl text-earth-dark font-bold">Modelos Sugeridos</h3>
+                    </div>
+                    <span class="text-xs text-earth-light italic font-serif">Arraste para o lado &rarr;</span>
+                </div>
+
+                <div class="flex gap-4 overflow-x-auto no-scrollbar pb-4 -mx-4 px-4 snap-x snap-mandatory">
+                    <div class="snap-center flex-shrink-0 w-56 watercolor-card rounded-2xl overflow-hidden shadow-md border border-earth-light/20">
+                        <div class="h-72 overflow-hidden bg-gray-100 relative">
+                            <img src="imagens/terracota.png" alt="Vestido Terracota" class="w-full h-full object-cover">
+                            <span class="absolute bottom-2 left-2 bg-black/60 backdrop-blur-md text-white text-xs px-3 py-1 rounded-full font-serif">Terracota</span>
+                        </div>
+                        <div class="p-3 text-center">
+                            <p class="text-xs text-gray-600 italic font-serif">Fluidez & Elegância</p>
+                        </div>
+                    </div>
+
+                    <div class="snap-center flex-shrink-0 w-56 watercolor-card rounded-2xl overflow-hidden shadow-md border border-earth-light/20">
+                        <div class="h-72 overflow-hidden bg-gray-100 relative">
+                            <img src="imagens/azul-marinho.png" alt="Vestido Azul Marinho" class="w-full h-full object-cover">
+                            <span class="absolute bottom-2 left-2 bg-black/60 backdrop-blur-md text-white text-xs px-3 py-1 rounded-full font-serif">Azul Marinho</span>
+                        </div>
+                        <div class="p-3 text-center">
+                            <p class="text-xs text-gray-600 italic font-serif">Clássico & Atemporal</p>
+                        </div>
+                    </div>
+
+                    <div class="snap-center flex-shrink-0 w-56 watercolor-card rounded-2xl overflow-hidden shadow-md border border-earth-light/20">
+                        <div class="h-72 overflow-hidden bg-gray-100 relative">
+                            <img src="imagens/mostarda.png" alt="Vestido Mostarda" class="w-full h-full object-cover">
+                            <span class="absolute bottom-2 left-2 bg-black/60 backdrop-blur-md text-white text-xs px-3 py-1 rounded-full font-serif">Mostarda</span>
+                        </div>
+                        <div class="p-3 text-center">
+                            <p class="text-xs text-gray-600 italic font-serif">Vibrante & Marcante</p>
+                        </div>
+                    </div>
+
+                    <div class="snap-center flex-shrink-0 w-56 watercolor-card rounded-2xl overflow-hidden shadow-md border border-earth-light/20">
+                        <div class="h-72 overflow-hidden bg-gray-100 relative">
+                            <img src="imagens/verde-oliva.png" alt="Vestido Verde Oliva" class="w-full h-full object-cover">
+                            <span class="absolute bottom-2 left-2 bg-black/60 backdrop-blur-md text-white text-xs px-3 py-1 rounded-full font-serif">Verde Oliva</span>
+                        </div>
+                        <div class="p-3 text-center">
+                            <p class="text-xs text-gray-600 italic font-serif">Sofisticado & Natural</p>
+                        </div>
+                    </div>
+
+                    <div class="snap-center flex-shrink-0 w-56 watercolor-card rounded-2xl overflow-hidden shadow-md border border-earth-light/20">
+                        <div class="h-72 overflow-hidden bg-gray-100 relative">
+                            <img src="imagens/rosa-queimado.png" alt="Vestido Rosa Queimado" class="w-full h-full object-cover">
+                            <span class="absolute bottom-2 left-2 bg-black/60 backdrop-blur-md text-white text-xs px-3 py-1 rounded-full font-serif">Rosa Queimado</span>
+                        </div>
+                        <div class="p-3 text-center">
+                            <p class="text-xs text-gray-600 italic font-serif">Romântico & Delicado</p>
+                        </div>
+                    </div>
+
+                    <div class="snap-center flex-shrink-0 w-56 watercolor-card rounded-2xl overflow-hidden shadow-md border border-earth-light/20">
+                        <div class="h-72 overflow-hidden bg-gray-100 relative">
+                            <img src="imagens/chocolate.png" alt="Vestido Chocolate" class="w-full h-full object-cover">
+                            <span class="absolute bottom-2 left-2 bg-black/60 backdrop-blur-md text-white text-xs px-3 py-1 rounded-full font-serif">Chocolate</span>
+                        </div>
+                        <div class="p-3 text-center">
+                            <p class="text-xs text-gray-600 italic font-serif">Acheiçoado & Quente</p>
+                        </div>
+                    </div>
+
+                    <div class="snap-center flex-shrink-0 w-56 watercolor-card rounded-2xl overflow-hidden shadow-md border border-earth-light/20">
+                        <div class="h-72 overflow-hidden bg-gray-100 relative">
+                            <img src="imagens/laranja-queimado.png" alt="Vestido Laranja Queimado" class="w-full h-full object-cover">
+                            <span class="absolute bottom-2 left-2 bg-black/60 backdrop-blur-md text-white text-xs px-3 py-1 rounded-full font-serif">Laranja Queimado</span>
+                        </div>
+                        <div class="p-3 text-center">
+                            <p class="text-xs text-gray-600 italic font-serif">Moderno & Elegante</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Welcoming Cards / Messages -->
+            <div class="space-y-4 mb-10">
+                <div class="watercolor-card p-5 rounded-2xl border-l-4 border-earth">
+                    <div class="flex items-center gap-2 mb-2">
+                        <i class="fa-solid fa-shirt text-earth text-sm"></i>
+                        <h4 class="font-serif font-bold text-earth-dark uppercase text-xs tracking-wider">Vestido</h4>
+                    </div>
+                    <p class="text-sm text-gray-700 leading-relaxed">
+                        Escolha um modelo que te faça sentir bem, confortável e linda. O importante é que seja do seu estilo e da sua forma de ser!
+                    </p>
+                </div>
+
+                <div class="watercolor-card p-5 rounded-2xl border-l-4 border-madrinha-rosaqueimado">
+                    <div class="flex items-center gap-2 mb-2">
+                        <i class="fa-solid fa-heart text-madrinha-rosaqueimado text-sm"></i>
+                        <h4 class="font-serif font-bold text-earth-dark uppercase text-xs tracking-wider">O Mais Importante</h4>
+                    </div>
+                    <p class="text-sm text-gray-700 leading-relaxed">
+                        É que você se sinta bem! No vestido, na cor, no seu jeito. Você é linda do seu jeito, e é exatamente assim que queremos você ao nosso lado!
+                    </p>
+                </div>
+
+                <div class="watercolor-card p-5 rounded-2xl border-l-4 border-madrinha-mostarda">
+                    <div class="flex items-center gap-2 mb-2">
+                        <i class="fa-solid fa-sparkles text-madrinha-mostarda text-sm"></i>
+                        <h4 class="font-serif font-bold text-earth-dark uppercase text-xs tracking-wider">Você é Especial</h4>
+                    </div>
+                    <p class="text-sm text-gray-700 leading-relaxed">
+                        Sua presença já torna este momento ainda mais bonito. Escolha a cor e o modelo que te façam brilhar, porque o que realmente importa é você, feliz!
+                    </p>
+                </div>
+
+                <div class="watercolor-card p-5 rounded-2xl border-l-4 border-madrinha-oliva">
+                    <div class="flex items-center gap-2 mb-2">
+                        <i class="fa-solid fa-hand-holding-heart text-madrinha-oliva text-sm"></i>
+                        <h4 class="font-serif font-bold text-earth-dark uppercase text-xs tracking-wider">Este é o Nosso Desejo</h4>
+                    </div>
+                    <p class="text-sm text-gray-700 leading-relaxed">
+                        Que você se sinta bem, confiante, confortável e livre para ser você. O seu sorriso e a sua alegria são o que mais importam para nós!
+                    </p>
+                </div>
+            </div>
+
+            <!-- Closing Note -->
+            <div class="text-center p-6 watercolor-card rounded-3xl mb-6 relative overflow-hidden">
+                <p class="font-serif italic text-xl text-earth-dark mb-2">
+                    "Estamos muito felizes por ter você ao nosso lado!"
+                </p>
+                <p class="font-script text-3xl text-earth">Bianca & Felipe</p>
+            </div>
+
+        </div>
+
+
+        <!-- ==================== PADRINHOS TAB ==================== -->
+        <div id="content-padrinhos" class="tab-transition hidden">
+            
+            <div class="text-center mb-6">
+                <span class="text-xs uppercase tracking-widest text-earth font-semibold block mb-1">Guia de Traje</span>
+                <h3 class="font-serif text-2xl text-earth-dark font-bold">Paleta de Cores & Look</h3>
+                <p class="text-xs text-gray-500 mt-1">Os detalhes pensados para um visual elegante e alinhado.</p>
+            </div>
+
+            <div class="grid grid-cols-2 gap-3 mb-10">
+                <div class="watercolor-card p-3.5 rounded-2xl swatch-card flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-xl shadow-inner border border-gray-300 flex-shrink-0" style="background-color: #FFFFFF;"></div>
+                    <div>
+                        <h4 class="font-serif font-bold text-sm text-gray-800 leading-tight">Camisa Branca</h4>
+                        <span class="text-[10px] text-gray-500 font-sans">Clássica</span>
+                    </div>
+                </div>
+                <div class="watercolor-card p-3.5 rounded-2xl swatch-card flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-xl shadow-inner border border-white/50 flex-shrink-0" style="background-color: #1A1A1A;"></div>
+                    <div>
+                        <h4 class="font-serif font-bold text-sm text-gray-800 leading-tight">Terno Preto</h4>
+                        <span class="text-[10px] text-gray-500 font-sans">Alinhado</span>
+                    </div>
+                </div>
+                <div class="watercolor-card p-3.5 rounded-2xl swatch-card flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-xl shadow-inner border border-white/50 flex-shrink-0" style="background-color: #6B2D38;"></div>
+                    <div>
+                        <h4 class="font-serif font-bold text-sm text-gray-800 leading-tight">Gravata Marsala</h4>
+                        <span class="text-[10px] text-gray-500 font-sans">Destaque</span>
+                    </div>
+                </div>
+                <div class="watercolor-card p-3.5 rounded-2xl swatch-card flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-xl shadow-inner border border-white/50 flex-shrink-0" style="background-color: #222222;"></div>
+                    <div>
+                        <h4 class="font-serif font-bold text-sm text-gray-800 leading-tight">Sapato Preto</h4>
+                        <span class="text-[10px] text-gray-500 font-sans">Social</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-10">
+                <div class="mb-4">
+                    <span class="text-xs uppercase tracking-widest text-earth font-semibold block">Composição</span>
+                    <h3 class="font-serif text-2xl text-earth-dark font-bold">Detalhes do Look</h3>
+                </div>
+
+                <div class="watercolor-card rounded-2xl overflow-hidden shadow-sm border border-earth-light/20 flex flex-col items-center">
+                    <div class="w-full h-[520px] bg-cream-accent/30 flex items-center justify-center overflow-hidden p-2">
+                        <img src="imagens/padrinho.png" alt="Traje Completo do Padrinho" class="max-w-full max-h-full object-contain rounded-xl shadow-inner">
+                    </div>
+                    <div class="p-4 text-center w-full border-t border-earth-light/10">
+                        <h5 class="font-serif font-bold text-base text-gray-800">Traje Completo</h5>
+                        <p class="text-xs text-earth italic font-serif mt-0.5">Terno preto, camisa branca, gravata marsala e sapato preto</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="space-y-4 mb-10">
+                <div class="watercolor-card p-5 rounded-2xl border-l-4 border-padrinho-gravata">
+                    <div class="flex items-center gap-2 mb-2">
+                        <i class="fa-solid fa-user-tie text-padrinho-gravata text-sm"></i>
+                        <h4 class="font-serif font-bold text-earth-dark uppercase text-xs tracking-wider">Orientação do Traje</h4>
+                    </div>
+                    <p class="text-sm text-gray-700 leading-relaxed">
+                        Camisa branca, terno preto, gravata marsala e sapato preto. É importante manter o traje completo e bem alinhado para que todos estejam em harmonia neste momento tão especial.
+                    </p>
+                </div>
+
+                <div class="watercolor-card p-5 rounded-2xl border-l-4 border-earth">
+                    <div class="flex items-center gap-2 mb-2">
+                        <i class="fa-solid fa-heart text-earth text-sm"></i>
+                        <h4 class="font-serif font-bold text-earth-dark uppercase text-xs tracking-wider">Este é o Nosso Desejo</h4>
+                    </div>
+                    <p class="text-sm text-gray-700 leading-relaxed">
+                        Que vocês se sintam bem, confiantes e, acima de tudo, felizes por fazer parte desse capítulo tão importante das nossas vidas.
+                    </p>
+                </div>
+            </div>
+
+            <div class="text-center p-6 watercolor-card rounded-3xl mb-6 relative overflow-hidden">
+                <p class="font-serif italic text-xl text-earth-dark mb-2">
+                    "Obrigado por caminharem com a gente até aqui."
+                </p>
+                <p class="font-script text-3xl text-earth">Bianca & Felipe</p>
+            </div>
+
+        </div>
+
+
+        <!-- ==================== RECADO ESPECIAL TAB ==================== -->
+        <div id="content-recado" class="tab-transition hidden">
+            
+            <div class="text-center mb-6">
+                <span class="text-xs uppercase tracking-widest text-earth font-semibold block mb-1">Carinho & Gratidão</span>
+                <h3 class="font-serif text-2xl text-earth-dark font-bold">Recado Especial</h3>
+                <p class="text-xs text-gray-500 mt-1">Uma mensagem do fundo do nosso coração para vocês.</p>
+            </div>
+
+            <!-- Carta Personalizada -->
+            <div class="watercolor-card p-6 sm:p-8 rounded-3xl border border-earth-light/20 relative shadow-md mb-8">
+                <div class="text-center mb-6">
+                    <i class="fa-solid fa-envelope-open-text text-earth-light text-4xl"></i>
+                </div>
+
+                <div class="space-y-4 text-gray-700 text-sm sm:text-base leading-relaxed font-serif text-left">
+                    <p class="italic text-xl text-earth-dark font-semibold mb-4">
+                        Neno e Cris,
+                    </p>
+                    
+                    <p>
+                        Existem pessoas que chegam à nossa vida como amigos e, com o tempo, se tornam parte da nossa família. Vocês são exatamente assim para nós.
+                    </p>
+
+                    <p>
+                        A história de vocês sempre nos faz sorrir. Começou em uma amizade, nas viagens de van para a faculdade, no receio de que um sentimento pudesse colocar essa amizade em risco… até que a vida resolveu dar aquele empurrãozinho.
+                    </p>
+
+                    <p>
+                        Depois de uma conversa entre amigos, veio o momento que mudou a história de vocês: um portão, uma despedida e um primeiro beijo. E, desde aquele dia, vocês escolheram permanecer lado a lado.
+                    </p>
+
+                    <p>
+                        Talvez seja isso que mais admiramos em vocês como casal: a escolha diária de estarem juntos.
+                    </p>
+
+                    <p>
+                        O Neno, com seu jeito vaidoso e cheio de personalidade. A Cris, com seu coração enorme e sentimental. Dois jeitos tão particulares de ser, mas que se encontram justamente onde importa: no cuidado, na parceria, na amizade e no amor.
+                    </p>
+
+                    <p>
+                        E quem conhece vocês sabe que esse amor não fica só entre vocês dois. Ele transborda para quem está por perto.
+                    </p>
+
+                    <p>
+                        Vocês são presença. Estiveram conosco em tantos momentos da nossa história que, olhando para trás, percebemos o quanto vocês fizeram parte dela.
+                    </p>
+
+                    <p>
+                        Vocês ajudaram para que o nosso encontro acontecesse. Naquele retiro, nossos caminhos se cruzaram e, sem que soubéssemos começaba ali uma nova história.
+                    </p>
+
+                    <p>
+                        Vocês também estavam conosco quando começamos a namorar e até naquele nosso primeiro terço juntos que, convenhamos, foi tão engraçado que acabou se tornando umaquelas lembranças que guardamos com muito carinho.
+                    </p>
+
+                    <p>
+                        E, desde então, vocês continuaram presentes. Nos momentos felizes, comemorando com a gente, e também nos momentos difíceis, quando simplesmente estar ao lado já significava tudo. Sem frescura, sem medir esforços e sempre com esse jeito alegre que faz tudo ficar mais leve.
+                    </p>
+
+                    <p>
+                        Talvez seja por isso que olhar para vocês nos faça pensar tanto no casamento que queremos construir.
+                    </p>
+
+                    <p>
+                        Um casamento que seja também amizade. Que tenha cumplicidade, risadas, acolhimento e a certeza de que, nos dias bons e nos dias ruins, haverá alguém ao nosso lado dizendo: “eu estou aqui.”
+                    </p>
+
+                    <p>
+                        E é exatamente assim que queremos vocês ao nosso lado nesse momento tão importante.
+                    </p>
+
+                    <p>
+                        Não apenas como nossos padrinhos, mas como duas pessoas que fazem parte da nossa história e que queremos levar conosco para todas as próximas páginas dela.
+                    </p>
+
+                    <p>
+                        Porque vocês estiveram presentes antes mesmo de sabermos que nossas histórias iriam se encontrar. Ajudaram, de alguma forma, para que esse encontro acontecesse e continuaram ao nosso lado enquanto nossa história foi sendo construída. Agora, queremos vocês conosco para testemunhar e fazer parte desse novo capítulo que estamos começando juntos.
+                    </p>
+                </div>
+
+                <div class="mt-8 pt-6 border-t border-earth-light/20 text-center">
+                    <p class="font-script text-4xl text-earth-dark mt-2">Bianca & Felipe</p>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- Floating Contact Button (WhatsApp Action) -->
+    <div class="fixed bottom-4 left-0 right-0 z-50 px-4 max-w-md mx-auto">
+        <a href="https://wa.me/?text=Ol%C3%A1%20Bianca%20e%20Felipe!%20Amei%20o%20Manual%20dos%20Padrinhos." target="_blank" class="w-full bg-earth-dark hover:bg-earth text-white py-3.5 px-6 rounded-full shadow-2xl font-serif text-xs tracking-widest uppercase flex items-center justify-center gap-3 border border-amber-200/30 active:scale-95 transition-all">
+            <i class="fa-brands fa-whatsapp text-lg text-emerald-400"></i>
+            <span>FALAR COM OS NOIVOS</span>
+        </a>
+    </div>
+
+    <!-- Script de Troca de Abas -->
+    <script>
+   
