@@ -1,1 +1,329 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manual dos Padrinhos | Bianca & Felipe</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Great+Vibes&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cream: '#FDFBF7',
+                        'cream-accent': '#F5EFE6',
+                        earth: '#8B5E3C',
+                        'earth-light': '#A67C52',
+                        'earth-dark': '#5C3D26',
+                        charcoal: '#2C2A29',
+                        padrinho: {
+                            camisa: '#FFFFFF',
+                            terno: '#1A1A1A',
+                            gravata: '#6B2D38',
+                            sapato: '#222222'
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['"Cormorant Garamond"', 'serif'],
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        script: ['"Great Vibes"', 'cursive']
+                    }
+                }
+            }
+        }
+    </script>
 
+    <style>
+        body {
+            background-color: #FDFBF7;
+            color: #2C2A29;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            overflow-x: hidden;
+        }
+
+        .watercolor-card {
+            position: relative;
+            background: linear-gradient(135deg, rgba(255,255,255,0.92) 0%, rgba(253,251,247,0.8) 100%);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(166, 124, 82, 0.18);
+            box-shadow: 0 10px 25px -5px rgba(139, 94, 60, 0.08), 0 8px 10px -6px rgba(139, 94, 60, 0.04);
+        }
+
+        .swatch-card {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            background-image: radial-gradient(circle at 50% 0%, rgba(255, 255, 255, 0.3), transparent 70%);
+        }
+
+        .swatch-card:hover, .swatch-card:active {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 20px -3px rgba(0, 0, 0, 0.12);
+        }
+
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        .bg-floral-top {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 800 200'%3E%3Cg fill='%23A67C52' fill-opacity='0.08'%3E%3Cpath d='M100 20c-20 0-40 10-50 30-10-20-30-30-50-30 0 40 30 70 50 100 20-30 50-60 50-100zM750 20c-20 0-40 10-50 30-10-20-30-30-50-30 0 40 30 70 50 100 20-30 50-60 50-100z'/%3E%3Cpath d='M400 10c-30 0-60 15-75 45-15-30-45-45-75-45 0 60 45 105 75 150 30-45 75-90 75-150z'/%3E%3C/g%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: top center;
+            background-size: contain;
+        }
+
+        .active-tab {
+            background-color: #8B5E3C !important;
+            color: #FFFFFF !important;
+            box-shadow: 0 4px 14px rgba(139, 94, 60, 0.35);
+        }
+
+        .tab-transition {
+            transition: all 0.4s ease-in-out;
+        }
+    </style>
+</head>
+<body class="min-h-screen pb-24 text-charcoal bg-floral-top">
+
+    <!-- Header Section -->
+    <header class="pt-8 pb-6 px-4 text-center max-w-md mx-auto relative">
+        <div class="flex justify-center mb-3">
+            <svg class="w-16 h-8 text-earth-light opacity-75" viewBox="0 0 100 50" fill="currentColor">
+                <path d="M50 45 C40 30, 20 25, 5 30 C20 20, 35 20, 50 35 C65 20, 80 20, 95 30 C80 25, 60 30, 50 45 Z"></path>
+                <circle cx="50" cy="12" r="3" fill="#8B5E3C"></circle>
+                <circle cx="42" cy="18" r="2" fill="#A67C52"></circle>
+                <circle cx="58" cy="18" r="2" fill="#A67C52"></circle>
+            </svg>
+        </div>
+
+        <p class="font-serif italic text-earth text-base tracking-wide mb-1">
+            "O amor jamais acabará."
+        </p>
+        <span class="text-xs uppercase tracking-widest text-earth-light font-medium block mb-4">1 Coríntios 13:8</span>
+
+        <h1 class="font-serif text-2xl sm:text-3xl font-bold tracking-wider text-earth-dark uppercase mb-1 leading-snug">
+            Manual dos Padrinhos
+        </h1>
+
+        <div class="w-24 h-0.5 bg-gradient-to-r from-transparent via-earth-light to-transparent mx-auto my-4"></div>
+
+        <p class="font-serif italic text-lg text-gray-700 px-4 leading-relaxed mb-4">
+            Juntos neste dia tão especial.<br>
+            <span class="text-xs font-sans not-italic text-gray-600 block mt-2 leading-relaxed">
+                Mais do que um convite ou terno, é sobre estar presente de forma única e verdadeira.
+            </span>
+        </p>
+
+        <p class="font-script text-4xl text-earth-dark mt-2 tracking-wide">
+            Bianca & Felipe
+        </p>
+    </header>
+
+    <!-- Navigation Tabs -->
+    <section class="max-w-md mx-auto px-3 mb-8 sticky top-3 z-40">
+        <div class="bg-white/95 backdrop-blur-md p-1.5 rounded-full shadow-lg border border-earth-light/20 flex justify-between gap-1">
+            <button id="tab-padrinhos" onclick="switchTab('padrinhos')" class="tab-transition flex-1 py-2.5 px-2 rounded-full font-serif text-xs font-bold tracking-wider flex items-center justify-center gap-1 active-tab">
+                <span>👔</span> PADRINHOS
+            </button>
+            <button id="tab-recado" onclick="switchTab('recado')" class="tab-transition flex-1 py-2.5 px-2 rounded-full font-serif text-xs font-bold tracking-wider text-earth hover:bg-cream-accent/50 flex items-center justify-center gap-1">
+                <span>✉️</span> RECADO
+            </button>
+        </div>
+    </section>
+
+    <!-- MAIN CONTENT CONTAINER -->
+    <main class="max-w-md mx-auto px-4">
+
+        <!-- ==================== PADRINHOS TAB ==================== -->
+        <div id="content-padrinhos" class="tab-transition block">
+            
+            <div class="text-center mb-6">
+                <span class="text-xs uppercase tracking-widest text-earth font-semibold block mb-1">Guia de Traje</span>
+                <h3 class="font-serif text-2xl text-earth-dark font-bold">Paleta de Cores & Look</h3>
+                <p class="text-xs text-gray-500 mt-1">Os detalhes pensados para um visual elegante e alinhado.</p>
+            </div>
+
+            <div class="grid grid-cols-2 gap-3 mb-10">
+                <div class="watercolor-card p-3.5 rounded-2xl swatch-card flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-xl shadow-inner border border-gray-300 flex-shrink-0" style="background-color: #FFFFFF;"></div>
+                    <div>
+                        <h4 class="font-serif font-bold text-sm text-gray-800 leading-tight">Camisa Branca</h4>
+                        <span class="text-[10px] text-gray-500 font-sans">Clássica</span>
+                    </div>
+                </div>
+                <div class="watercolor-card p-3.5 rounded-2xl swatch-card flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-xl shadow-inner border border-white/50 flex-shrink-0" style="background-color: #1A1A1A;"></div>
+                    <div>
+                        <h4 class="font-serif font-bold text-sm text-gray-800 leading-tight">Terno Preto</h4>
+                        <span class="text-[10px] text-gray-500 font-sans">Alinhado</span>
+                    </div>
+                </div>
+                <div class="watercolor-card p-3.5 rounded-2xl swatch-card flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-xl shadow-inner border border-white/50 flex-shrink-0" style="background-color: #6B2D38;"></div>
+                    <div>
+                        <h4 class="font-serif font-bold text-sm text-gray-800 leading-tight">Gravata Marsala</h4>
+                        <span class="text-[10px] text-gray-500 font-sans">Destaque</span>
+                    </div>
+                </div>
+                <div class="watercolor-card p-3.5 rounded-2xl swatch-card flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-xl shadow-inner border border-white/50 flex-shrink-0" style="background-color: #222222;"></div>
+                    <div>
+                        <h4 class="font-serif font-bold text-sm text-gray-800 leading-tight">Sapato Preto</h4>
+                        <span class="text-[10px] text-gray-500 font-sans">Social</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-10">
+                <div class="mb-4">
+                    <span class="text-xs uppercase tracking-widest text-earth font-semibold block">Composição</span>
+                    <h3 class="font-serif text-2xl text-earth-dark font-bold">Detalhes do Look</h3>
+                </div>
+
+                <div class="watercolor-card rounded-2xl overflow-hidden shadow-sm border border-earth-light/20 flex flex-col items-center">
+                    <div class="w-full h-[520px] bg-cream-accent/30 flex items-center justify-center overflow-hidden p-2">
+                        <img src="imagens/padrinho.png" alt="Traje Completo do Padrinho" class="max-w-full max-h-full object-contain rounded-xl shadow-inner">
+                    </div>
+                    <div class="p-4 text-center w-full border-t border-earth-light/10">
+                        <h5 class="font-serif font-bold text-base text-gray-800">Traje Completo</h5>
+                        <p class="text-xs text-earth italic font-serif mt-0.5">Terno preto, camisa branca, gravata marsala e sapato preto</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="space-y-4 mb-10">
+                <div class="watercolor-card p-5 rounded-2xl border-l-4 border-padrinho-gravata">
+                    <div class="flex items-center gap-2 mb-2">
+                        <i class="fa-solid fa-user-tie text-padrinho-gravata text-sm"></i>
+                        <h4 class="font-serif font-bold text-earth-dark uppercase text-xs tracking-wider">Orientação do Traje</h4>
+                    </div>
+                    <p class="text-sm text-gray-700 leading-relaxed">
+                        Camisa branca, terno preto, gravata marsala e sapato preto. É importante manter o traje completo e bem alinhado para que todos estejam em harmonia neste momento tão especial.
+                    </p>
+                </div>
+
+                <div class="watercolor-card p-5 rounded-2xl border-l-4 border-earth">
+                    <div class="flex items-center gap-2 mb-2">
+                        <i class="fa-solid fa-heart text-earth text-sm"></i>
+                        <h4 class="font-serif font-bold text-earth-dark uppercase text-xs tracking-wider">Este é o Nosso Desejo</h4>
+                    </div>
+                    <p class="text-sm text-gray-700 leading-relaxed">
+                        Que você se sinta bem, confiante e, acima de tudo, feliz por fazer parte desse capítulo tão importante das nossas vidas.
+                    </p>
+                </div>
+            </div>
+
+            <div class="text-center p-6 watercolor-card rounded-3xl mb-6 relative overflow-hidden">
+                <p class="font-serif italic text-xl text-earth-dark mb-2">
+                    "Obrigado por caminhar com a gente até aqui."
+                </p>
+                <p class="font-script text-3xl text-earth">Bianca & Felipe</p>
+            </div>
+
+        </div>
+
+        <!-- ==================== RECADO ESPECIAL TAB ==================== -->
+        <div id="content-recado" class="tab-transition hidden">
+            
+            <div class="text-center mb-6">
+                <span class="text-xs uppercase tracking-widest text-earth font-semibold block mb-1">Carinho & Gratidão</span>
+                <h3 class="font-serif text-2xl text-earth-dark font-bold">Recado Especial</h3>
+                <p class="text-xs text-gray-500 mt-1">Uma mensagem do fundo do nosso coração para você.</p>
+            </div>
+
+            <!-- Carta Personalizada -->
+            <div class="watercolor-card p-6 sm:p-8 rounded-3xl border border-earth-light/20 relative shadow-md mb-8">
+                <div class="text-center mb-6">
+                    <i class="fa-solid fa-envelope-open-text text-earth-light text-4xl"></i>
+                </div>
+
+                <div class="space-y-4 text-gray-700 text-sm sm:text-base leading-relaxed font-serif text-justify">
+                    <p class="italic text-xl text-earth-dark font-semibold mb-4">
+                        Rafael,
+                    </p>
+                    
+                    <p>
+                        Existem amizades que não se medem pelo tempo que dura uma conversa ou pela frequência dos encontros, mas pela profundidade da raiz que foi lançada lá no começo. A nossa história com você é exatamente assim.
+                    </p>
+
+                    <p>
+                        Pensar na sua amizade com o Felipe é voltar a um tempo leve e inesquecível da infância. A época da mesma rua, das tardes infinitas jogando bola, taco, pega-pega e esconde-esconde, das horas diante do videogame e daquelas brincadeiras que só a infância sabe inventar. Numa época em que não existiam telas ou redes sociais para prender a atenção, vocês já se destacavam pela criatividade: compondo músicas, gravando e editando vídeos caseiros, inventando jogos de palavras e se desafiando com raciocínios e jogos intelectuais.
+                    </p>
+
+                    <p>
+                        Mas, para além da diversão, existia algo ainda maior se construindo ali. O papo entre vocês sempre fluiu com uma facilidade única, evoluindo de brincadeiras de rua para conversas profundas sobre a vida. O Felipe sempre admirou imensamente o seu olhar atento e a sua sensibilidade para as grandes questões do mundo, o seu senso crítico e de justiça tão apurado, e esse seu humor inteligente que consegue tornar qualquer momento marcante. A conexão de vocês se fortaleceu nos pensamentos, na busca por reflexões mais sinceras e, principalmente, nos princípios éticos e valores do que é certo e justo — pilares dos quais você nunca abriu mão.
+                    </p>
+
+                    <p>
+                        Você é uma pessoa de um talento impressionante para tudo o que se propõe a fazer, com uma organização e um cuidado impecável com os detalhes, e que guarda por trás desse lado mais racional e reflexivo um coração verdadeiramente gigante.
+                    </p>
+
+                    <p>
+                        A vida tomou seus rumos, vocês já não moram na mesma rua e a rotina não permite que se vejam com a frequência de antes. Mas a amizade de vocês tem essa magia bonita: pode passar o tempo que for, sem se falar ou se ver, que no reencontro nada mudou. A cumplicidade, o respeito e a admiração continuam intocados.
+                    </p>
+
+                    <p>
+                        A noiva, mesmo não tendo tido tantas oportunidades de conviver de perto ainda, conhece cada uma dessas histórias com um carinho enorme. Sabe do lugar único que você ocupa na vida do Felipe e está muito feliz e ansiosa para ter mais momentos ao seu lado, construindo também uma proximidade bonita e essa nova fase de amizade.
+                    </p>
+
+                    <p>
+                        Por tudo isso, no dia em que vamos dar o passo mais importante das nossas vidas, não poderíamos deixar de ter você ao nosso lado no altar. Queremos que você saiba o quanto é admirado, respeitado e querido por nós dois.
+                    </p>
+
+                    <p>
+                        Obrigado por ter sido base, história, inteligência, inspiração e uma amizade tão verdadeira ao longo de todos esses anos!
+                    </p>
+                </div>
+
+                <div class="mt-6 pt-4 border-t border-earth-light/20 text-center">
+                    <p class="font-script text-4xl text-earth-dark mt-2">Bianca e Felipe</p>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- Floating Contact Button (WhatsApp Action) -->
+    <div class="fixed bottom-4 left-0 right-0 z-50 px-4 max-w-md mx-auto">
+        <a href="https://wa.me/?text=Ol%C3%A1%20Bianca%20e%20Felipe!%20Amei%20o%20Manual%20dos%20Padrinhos." target="_blank" class="w-full bg-earth-dark hover:bg-earth text-white py-3.5 px-6 rounded-full shadow-2xl font-serif text-xs tracking-widest uppercase flex items-center justify-center gap-3 border border-amber-200/30 active:scale-95 transition-all">
+            <i class="fa-brands fa-whatsapp text-lg text-emerald-400"></i>
+            <span>FALAR COM OS NOIVOS</span>
+        </a>
+    </div>
+
+    <!-- Script de Troca de Abas -->
+    <script>
+        function switchTab(tabName) {
+            const tabs = ['padrinhos', 'recado'];
+            
+            tabs.forEach(tab => {
+                const button = document.getElementById(`tab-${tab}`);
+                const content = document.getElementById(`content-${tab}`);
+                
+                if (tab === tabName) {
+                    button.classList.add('active-tab');
+                    button.classList.remove('text-earth', 'hover:bg-cream-accent/50');
+                    content.classList.remove('hidden');
+                    content.classList.add('block');
+                } else {
+                    button.classList.remove('active-tab');
+                    button.classList.add('text-earth', 'hover:bg-cream-accent/50');
+                    content.classList.add('hidden');
+                    content.classList.remove('block');
+                }
+            });
+        }
+    </script>
+</body>
+</html>
